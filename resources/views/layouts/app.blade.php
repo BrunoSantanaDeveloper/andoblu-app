@@ -94,23 +94,29 @@
         <header id="page-topbar">
             <div class="navbar-header">
                 <div class="d-flex">
+                    <a class="navbar-brand text-md-center"
+                ></a>
                     <!-- LOGO -->
                     <div class="navbar-brand-box">
-                        <a href="index.php" class="logo logo-dark">
+                        <a href="{{ route('dashboard') }}" class="logo logo-dark">
                             <span class="logo-sm">
-                                <img src="assets/images/logo.svg" alt="" height="22">
+                                {{-- <img src="assets/images/logo.svg" alt="" height="22"> --}}
+                                {{ get_option('site_title', config('app.name')) }}
                             </span>
                             <span class="logo-lg">
-                                <img src="assets/images/logo-dark.png" alt="" height="17">
+                                {{-- <img src="assets/images/logo-dark.png" alt="" height="17"> --}}
+                                A
                             </span>
                         </a>
         
-                        <a href="index.php" class="logo logo-light">
+                        <a href="{{ route('dashboard') }}" class="logo logo-light">
                             <span class="logo-sm">
-                                <img src="assets/images/logo-light.svg" alt="" height="22">
+                                {{-- <img src="assets/images/logo-light.svg" alt="" height="22"> --}}
+                                {{ get_option('site_title', config('app.name')) }}
                             </span>
                             <span class="logo-lg">
-                                <img src="assets/images/logo-light.png" alt="" height="19">
+                                {{-- <img src="assets/images/logo-light.png" alt="" height="19"> --}}
+                                A
                             </span>
                         </a>
                     </div>
@@ -119,253 +125,12 @@
                         <i class="fa fa-fw fa-bars"></i>
                     </button>
         
-                    <!-- App Search-->
-                    <form class="app-search d-none d-lg-block">
-                        <div class="position-relative">
-                            <input type="text" class="form-control" placeholder="Search">
-                            <span class="bx bx-search-alt"></span>
-                        </div>
-                    </form>
-        
-                    <div class="dropdown dropdown-mega d-none d-lg-block ms-2">
-                        <button type="button" class="btn header-item waves-effect" data-bs-toggle="dropdown" aria-haspopup="false" aria-expanded="false">
-                            <span key="t-megamenu">Mega_Menu</span>
-                            <i class="mdi mdi-chevron-down"></i> 
-                        </button>
-                        <div class="dropdown-menu dropdown-megamenu">
-                            <div class="row">
-                                <div class="col-sm-8">
-            
-                                    <div class="row">
-                                        <div class="col-md-4">
-                                            <h5 class="font-size-14 mt-0" key="t-ui-components">UI_Components</h5>
-                                            <ul class="list-unstyled megamenu-list">
-                                                <li>
-                                                    <a href="javascript:void(0);" key="t-lightbox">Lightbox</a>
-                                                </li>
-                                                <li>
-                                                    <a href="javascript:void(0);" key="t-range-slider">Range_Slider</a>
-                                                </li>
-                                                <li>
-                                                    <a href="javascript:void(0);" key="t-sweet-alert">Sweet_Alert</a>
-                                                </li>
-                                                <li>
-                                                    <a href="javascript:void(0);" key="t-rating">Rating</a>
-                                                </li>
-                                                <li>
-                                                    <a href="javascript:void(0);" key="t-forms">Forms</a>
-                                                </li>
-                                                <li>
-                                                    <a href="javascript:void(0);" key="t-tables">Tables</a>
-                                                </li>
-                                                <li>
-                                                    <a href="javascript:void(0);" key="t-charts">Charts</a>
-                                                </li>
-                                            </ul>
-                                        </div>
-        
-                                        <div class="col-md-4">
-                                            <h5 class="font-size-14 mt-0" key="t-applications">Applications</h5>
-                                            <ul class="list-unstyled megamenu-list">
-                                                <li>
-                                                    <a href="javascript:void(0);" key="t-ecommerce">Ecommerce</a>
-                                                </li>
-                                                <li>
-                                                    <a href="javascript:void(0);" key="t-calendar">Calendar</a>
-                                                </li>
-                                                <li>
-                                                    <a href="javascript:void(0);" key="t-email">Email</a>
-                                                </li>
-                                                <li>
-                                                    <a href="javascript:void(0);" key="t-projects">Projects</a>
-                                                </li>
-                                                <li>
-                                                    <a href="javascript:void(0);" key="t-tasks">Tasks</a>
-                                                </li>
-                                                <li>
-                                                    <a href="javascript:void(0);" key="t-contacts">Contacts</a>
-                                                </li>
-                                            </ul>
-                                        </div>
-        
-                                        <div class="col-md-4">
-                                            <h5 class="font-size-14 mt-0" key="t-extra-pages">Extra_Pages</h5>
-                                            <ul class="list-unstyled megamenu-list">
-                                                <li>
-                                                    <a href="javascript:void(0);" key="t-light-sidebar">Light_Sidebar</a>
-                                                </li>
-                                                <li>
-                                                    <a href="javascript:void(0);" key="t-compact-sidebar">Compact_Sidebar</a>
-                                                </li>
-                                                <li>
-                                                    <a href="javascript:void(0);" key="t-horizontal">Horizontal_layout</a>
-                                                </li>
-                                                <li>
-                                                    <a href="javascript:void(0);" key="t-maintenance">Maintenance</a>
-                                                </li>
-                                                <li>
-                                                    <a href="javascript:void(0);" key="t-coming-soon">Coming_Soon</a>
-                                                </li>
-                                                <li>
-                                                    <a href="javascript:void(0);" key="t-timeline">Timeline</a>
-                                                </li>
-                                                <li>
-                                                    <a href="javascript:void(0);" key="t-faqs">FAQs</a>
-                                                </li>
-                                    
-                                            </ul>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-sm-4">
-                                    <div class="row">
-                                        <div class="col-sm-6">
-                                            <h5 class="font-size-14 mt-0" key="t-ui-components">UI_Components</h5>
-                                            <ul class="list-unstyled megamenu-list">
-                                                <li>
-                                                    <a href="javascript:void(0);" key="t-lightbox">Lightbox</a>
-                                                </li>
-                                                <li>
-                                                    <a href="javascript:void(0);" key="t-range-slider">Range_Slider</a>
-                                                </li>
-                                                <li>
-                                                    <a href="javascript:void(0);" key="t-sweet-alert">Sweet_Alert</a>
-                                                </li>
-                                                <li>
-                                                    <a href="javascript:void(0);" key="t-rating">Rating</a>
-                                                </li>
-                                                <li>
-                                                    <a href="javascript:void(0);" key="t-forms">Forms</a>
-                                                </li>
-                                                <li>
-                                                    <a href="javascript:void(0);" key="t-tables">Tables</a>
-                                                </li>
-                                                <li>
-                                                    <a href="javascript:void(0);" key="t-charts">Charts</a>
-                                                </li>
-                                            </ul>
-                                        </div>
-        
-                                        <div class="col-sm-5">
-                                            <div>
-                                                <img src="assets/images/megamenu-img.png" alt="" class="img-fluid mx-auto d-block">
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-        
-                        </div>
-                    </div>
                 </div>
         
                 <div class="d-flex">
         
-                    <div class="dropdown d-inline-block d-lg-none ms-2">
-                        <button type="button" class="btn header-item noti-icon waves-effect" id="page-header-search-dropdown"
-                        data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            <i class="mdi mdi-magnify"></i>
-                        </button>
-                        <div class="dropdown-menu dropdown-menu-lg dropdown-menu-end p-0"
-                            aria-labelledby="page-header-search-dropdown">
-                
-                            <form class="p-3">
-                                <div class="form-group m-0">
-                                    <div class="input-group">
-                                        <input type="text" class="form-control" placeholder="Search ..." aria-label="Recipient's username">
-                                        <div class="input-group-append">
-                                            <button class="btn btn-primary" type="submit"><i class="mdi mdi-magnify"></i></button>
-                                        </div>
-                                    </div>
-                                </div>
-                            </form>
-                        </div>
-                    </div>
-        
-                    <div class="dropdown d-inline-block">
-                        <button type="button" class="btn header-item waves-effect"
-                        data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-
-                        </button>
-                        <div class="dropdown-menu dropdown-menu-end">
-        
-                            <!-- item-->
-                            <a href="?lang=en" class="dropdown-item notify-item language" data-lang="en">
-                                <img src="assets/images/flags/us.jpg" alt="user-image" class="me-1" height="12"> <span class="align-middle">English</span>
-                            </a>
-                            <!-- item-->
-                            <a href="?lang=es" class="dropdown-item notify-item language" data-lang="sp">
-                                <img src="assets/images/flags/spain.jpg" alt="user-image" class="me-1" height="12"> <span class="align-middle">Spanish</span>
-                            </a>
-        
-                            <!-- item-->
-                            <a href="?lang=de" class="dropdown-item notify-item language" data-lang="gr">
-                                <img src="assets/images/flags/germany.jpg" alt="user-image" class="me-1" height="12"> <span class="align-middle">German</span>
-                            </a>
-        
-                            <!-- item-->
-                            <a href="?lang=it" class="dropdown-item notify-item language" data-lang="it">
-                                <img src="assets/images/flags/italy.jpg" alt="user-image" class="me-1" height="12"> <span class="align-middle">Italian</span>
-                            </a>
-        
-                            <!-- item-->
-                            <a href="?lang=ru" class="dropdown-item notify-item language" data-lang="ru">
-                                <img src="assets/images/flags/russia.jpg" alt="user-image" class="me-1" height="12"> <span class="align-middle">Russian</span>
-                            </a>
-                        </div>
-                    </div>
-        
-                    <div class="dropdown d-none d-lg-inline-block ms-1">
-                        <button type="button" class="btn header-item noti-icon waves-effect"
-                        data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            <i class="bx bx-customize"></i>
-                        </button>
-                        <div class="dropdown-menu dropdown-menu-lg dropdown-menu-end">
-                            <div class="px-lg-2">
-                                <div class="row g-0">
-                                    <div class="col">
-                                        <a class="dropdown-icon-item" href="#">
-                                            <img src="assets/images/brands/github.png" alt="Github">
-                                            <span>GitHub</span>
-                                        </a>
-                                    </div>
-                                    <div class="col">
-                                        <a class="dropdown-icon-item" href="#">
-                                            <img src="assets/images/brands/bitbucket.png" alt="bitbucket">
-                                            <span>Bitbucket</span>
-                                        </a>
-                                    </div>
-                                    <div class="col">
-                                        <a class="dropdown-icon-item" href="#">
-                                            <img src="assets/images/brands/dribbble.png" alt="dribbble">
-                                            <span>Dribbble</span>
-                                        </a>
-                                    </div>
-                                </div>
-        
-                                <div class="row g-0">
-                                    <div class="col">
-                                        <a class="dropdown-icon-item" href="#">
-                                            <img src="assets/images/brands/dropbox.png" alt="dropbox">
-                                            <span>Dropbox</span>
-                                        </a>
-                                    </div>
-                                    <div class="col">
-                                        <a class="dropdown-icon-item" href="#">
-                                            <img src="assets/images/brands/mail_chimp.png" alt="mail_chimp">
-                                            <span>Mail Chimp</span>
-                                        </a>
-                                    </div>
-                                    <div class="col">
-                                        <a class="dropdown-icon-item" href="#">
-                                            <img src="assets/images/brands/slack.png" alt="slack">
-                                            <span>Slack</span>
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+            
+                    
         
                     <div class="dropdown d-none d-lg-inline-block ms-1">
                         <button type="button" class="btn header-item noti-icon waves-effect" data-toggle="fullscreen">
@@ -465,24 +230,27 @@
                         data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                             <img class="rounded-circle header-profile-user" src="assets/images/users/avatar-1.jpg"
                                 alt="Header Avatar">
-                            <span class="d-none d-xl-inline-block ms-1" key="t-henry">username</span>
+                            <span class="d-none d-xl-inline-block ms-1" key="t-henry">{{ Auth::user()->name }}</span>
                             <i class="mdi mdi-chevron-down d-none d-xl-inline-block"></i>
                         </button>
                         <div class="dropdown-menu dropdown-menu-end">
                             <!-- item-->
-                            <a class="dropdown-item" href="#"><i class="bx bx-user font-size-16 align-middle me-1"></i> <span key="t-profile">Profile</span></a>
-                            <a class="dropdown-item" href="#"><i class="bx bx-wallet font-size-16 align-middle me-1"></i> <span key="t-my-wallet">My_Wallet</span></a>
-                            <a class="dropdown-item d-block" href="#"><span class="badge bg-success float-end">11</span><i class="bx bx-wrench font-size-16 align-middle me-1"></i> <span key="t-settings">Settings</span></a>
-                            <a class="dropdown-item" href="#"><i class="bx bx-lock-open font-size-16 align-middle me-1"></i> <span key="t-lock-screen">Lock_screen</span></a>
+                            @if(Auth::user()->user_type == 'user' && get_option('membership_system') == 'enabled')
+                                    <a class="dropdown-item" href="{{ route('membership.extend') }}"><i class="dripicons-article font-size-16 align-middle me-1"></i> <span key="membership-extend">{{ _lang('Extend Membership') }}</span></a>
+                            @endif
+                            <a class="dropdown-item"  href="{{ route('profile.index') }}"><i class="bx bx-user font-size-16 align-middle me-1"></i> <span key="t-profile">{{ _lang('My Profile') }}</span></a>
+                            <a class="dropdown-item d-block" href="{{ route('profile.edit') }}"><i class="bx bx-wrench font-size-16 align-middle me-1"></i> <span key="t-settings">{{ _lang('Profile Settings') }}</span></a>
+                            <a class="dropdown-item" href="{{ route('profile.change_password') }}"><i class="bx bx-lock-open font-size-16 align-middle me-1"></i> <span key="t-lock-screen">{{ _lang('Change Password') }}</span></a>
+                            @if(Auth::user()->user_type == 'admin')      
+                            <a class="dropdown-item" href="{{ route('settings.update_settings') }}"><i
+                                    class="bx bx-slider-alt font-size-16 align-middle me-1"></i> <span key="t-update_settings">{{ _lang('System Settings') }}</span></a>
+                            @elseif(Auth::user()->user_type == 'user')   
+                            <a class="dropdown-item" href="{{ route('company.change_settings') }}"><i
+                                    class="bx bx-slider-alt font-size-16 align-middle me-1"></i> <span key="t-change_settings">{{ _lang('Company Settings') }}</span></a>
+                            @endif
                             <div class="dropdown-divider"></div>
-                            <a class="dropdown-item text-danger" href="logout.php"><i class="bx bx-power-off font-size-16 align-middle me-1 text-danger"></i> <span key="t-logout">Logout</span></a>
+                            <a class="dropdown-item text-danger" href="{{ url('logout') }}"><i class="bx bx-power-off font-size-16 align-middle me-1 text-danger"></i> <span key="t-logout">{{ _lang('Logout') }}</span></a>
                         </div>
-                    </div>
-        
-                    <div class="dropdown d-inline-block">
-                        <button type="button" class="btn header-item noti-icon right-bar-toggle waves-effect">
-                            <i class="bx bx-cog bx-spin"></i>
-                        </button>
                     </div>
         
                 </div>
@@ -490,49 +258,7 @@
         </header>
     </div>
     <!--Header Nav-->
-    <nav class="sb-topnav navbar navbar-expand navbar-dark bg-dark">
-        <div class="container-fluid">
-            <a class="navbar-brand text-md-center"
-                href="{{ route('dashboard') }}">{{ get_option('site_title', config('app.name')) }}</a>
-            <button class="btn btn-link btn-sm mr-auto" id="sidebarToggle" href="#">
-                <div class="lines">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </div>
-            </button>
-
-            <ul class="navbar-nav ml-auto ml-md-0">
-                <li class="nav-item dropdown animate-dropdown">
-                    <a class="nav-link dropdown-toggle" id="userDropdown" href="#" role="button" data-toggle="dropdown"
-                        aria-haspopup="true" aria-expanded="false"><i class="ti-user"></i> {{ Auth::user()->name }}</a>
-                    <div class="dropdown-menu dropdown-menu-right" aria-labelledby="userDropdown">
-                        @if(Auth::user()->user_type == 'user' && get_option('membership_system') == 'enabled')
-							<a class="dropdown-item" href="{{ route('membership.extend') }}"><i class="ti-id-badge"></i> {{ _lang('Extend Membership') }}</a>
-						@endif
-                        <a class="dropdown-item" href="{{ route('profile.index') }}"><i class="ti-user"></i>
-                            {{ _lang('My Profile') }}</a>
-                        <a class="dropdown-item" href="{{ route('profile.edit') }}"><i class="ti-settings"></i>
-                            {{ _lang('Profile Settings') }}</a>
-                        <a class="dropdown-item" href="{{ route('profile.change_password') }}"><i
-                                class="ti-exchange-vertical"></i> {{ _lang('Change Password') }}</a>
-                        @if(Auth::user()->user_type == 'admin')      
-                        <a class="dropdown-item" href="{{ route('settings.update_settings') }}"><i
-                                class="ti-panel"></i> {{ _lang('System Settings') }}</a>
-                        @elseif(Auth::user()->user_type == 'user')   
-                        <a class="dropdown-item" href="{{ route('company.change_settings') }}"><i
-                                class="ti-settings"></i> {{ _lang('Company Settings') }}</a>
-                        @endif
-                        <div class="dropdown-divider"></div>
-                        <a class="dropdown-item" href="{{ url('logout') }}"><i class="ti-power-off"></i>
-                            {{ _lang('Logout') }}</a>
-                    </div>
-                </li>
-            </ul>
-
-        </div>
-    </nav>
-    <!--End Header Nav-->
+    
 
     <div id="layoutSidenav" class="container-fluid d-flex align-items-stretch">
         <div id="layoutSidenav_nav">
