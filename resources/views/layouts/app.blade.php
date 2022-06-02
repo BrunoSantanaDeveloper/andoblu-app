@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 
 <head>
     <meta charset="utf-8" />
@@ -36,6 +36,13 @@
     <link rel="stylesheet" href="{{ asset('public/backend/assets/css/rtl/bootstrap.min.css') }}">
     <link rel="stylesheet" href="{{ asset('public/backend/assets/css/rtl/style.css') }}">
     @endif
+
+    <!-- Bootstrap Css -->
+    <link href="{{ asset('public/backend/css/bootstrap.min.css') }}" id="bootstrap-style" rel="stylesheet" type="text/css" />
+    <!-- Icons Css -->
+    <link href="{{ asset('public/backend/css/icons.min.css') }}" rel="stylesheet" type="text/css" />
+    <!-- App Css-->
+    <link href="{{ asset('public/backend/css/app.min.css') }}" id="app-style" rel="stylesheet" type="text/css" />
 
     @include('layouts.others.languages')
 
@@ -197,6 +204,14 @@
     <script src="{{ asset('public/backend/plugins/tinymce/tinymce.min.js') }}"></script>
     <script src="{{ asset('public/backend/plugins/parsleyjs/parsley.min.js') }}"></script>
     <script src="{{ asset('public/backend/plugins/jquery-toast-plugin/jquery.toast.min.js') }}"></script>
+
+    <!-- JAVASCRIPT -->
+    <script src="{{ asset('public/backend/assets/libs/jquery/jquery.min.js') }}"></script>
+    <script src="{{ asset('public/backend/assets/libs/bootstrap/js/bootstrap.bundle.min.js') }}"></script>
+    <script src="{{ asset('public/backend/assets/libs/metismenu/metisMenu.min.js') }}"></script>
+    <script src="{{ asset('public/backend/assets/libs/simplebar/simplebar.min.js') }}"></script>
+    <script src="{{ asset('public/backend/assets/libs/node-waves/waves.min.js') }}"></script>
+    <script src="{{ asset('public/backend/assets/js/app.js') }}"></script>
 
     <!-- App js -->
     <script src="{{ asset('public/backend/assets/js/scripts.js?v=1.1') }}"></script>
