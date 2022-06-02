@@ -59,7 +59,7 @@
     <li class="nav-item dropdown" id="reports">
         <a class="nav-link dropdown-toggle arrow-none" href="#" id="topnav-dashboard" role="button"
             >
-            <i class="bx bx-home-circle me-2"></i><span key="t-dashboards">{{ _lang('Recurring Transaction') }}</span> <div class="arrow-down"></div>
+            <i class="bx bx-home-circle me-2"></i><span key="t-dashboards">{{ _lang('Reports') }}</span> <div class="arrow-down"></div>
         </a>
         <div class="dropdown-menu" aria-labelledby="topnav-dashboard">
             <a class="dropdown-item" href="{{ route('reports.account_statement') }}">{{ _lang('Account Statement') }}</a>
@@ -75,12 +75,12 @@
     <li class="nav-item dropdown" id="transaction_settings">
         <a class="nav-link dropdown-toggle arrow-none" href="#" id="topnav-dashboard" role="button"
             >
-            <i class="bx bx-home-circle me-2"></i><span key="t-dashboards">{{ _lang('Recurring Transaction') }}</span> <div class="arrow-down"></div>
+            <i class="bx bx-home-circle me-2"></i><span key="t-dashboards">{{ _lang('Transaction Settings') }}</span> <div class="arrow-down"></div>
         </a>
         <div class="dropdown-menu" aria-labelledby="topnav-dashboard">
             <a class="dropdown-item" href="{{ route('chart_of_accounts.index') }}">{{ _lang('Income & Expense Types') }}</a>
-        <a class="dropdown-item" href="{{ route('payment_methods.index') }}">{{ _lang('Payment Methods') }}</a>
-        <a class="dropdown-item" href="{{ route('taxs.index') }}">{{ _lang('Tax Settings') }}</a>
+            <a class="dropdown-item" href="{{ route('payment_methods.index') }}">{{ _lang('Payment Methods') }}</a>
+            <a class="dropdown-item" href="{{ route('taxs.index') }}">{{ _lang('Tax Settings') }}</a>
         </div>
     </li>
 
