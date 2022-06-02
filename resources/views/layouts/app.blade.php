@@ -48,7 +48,7 @@
 
 </head>
 
-<body class="sb-nav-fixed">
+<body class="sb-nav-fixed" data-topbar="dark" data-layout="horizontal" data-layout-scrollable="true">
     <!-- Main Modal -->
     <div id="main_modal" class="modal" tabindex="-1" role="dialog">
         <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
