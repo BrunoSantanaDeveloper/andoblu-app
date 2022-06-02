@@ -35,24 +35,20 @@
             <i class="bx bx-home-circle me-2"></i><span key="t-dashboards">{{ _lang('Transactions') }}</span> <div class="arrow-down"></div>
         </a>
         <div class="dropdown-menu" aria-labelledby="topnav-dashboard">
+            {{--    
             <a class="dropdown-item" href="{{ route('income.index') }}">{{ _lang('Income/Deposit') }}</a>
-        <a class="dropdown-item" href="{{ route('expense.index') }}">{{ _lang('Expense') }}</a>
-        <a class="dropdown-item" href="{{ route('transfer.create') }}">{{ _lang('Transfer') }}</a>
-        <a class="dropdown-item" href="{{ route('income.income_calendar') }}">{{ _lang('Income Calendar') }}</a>
-        <a class="dropdown-item" href="{{ route('expense.expense_calendar') }}">{{ _lang('Expense Calendar') }}</a>
-        </div>
-    </li>
-
-    <li class="nav-item dropdown" id="recurring_transaction">
-        <a class="nav-link dropdown-toggle arrow-none" href="#" id="topnav-dashboard" role="button"
-            >
-            <i class="bx bx-home-circle me-2"></i><span key="t-dashboards">{{ _lang('Recurring Transaction') }}</span> <div class="arrow-down"></div>
-        </a>
-        <div class="dropdown-menu" aria-labelledby="topnav-dashboard">
+            <a class="dropdown-item" href="{{ route('transfer.create') }}">{{ _lang('Transfer') }}</a> 
+            <a class="dropdown-item" href="{{ route('income.income_calendar') }}">{{ _lang('Income Calendar') }}</a>
             <a class="dropdown-item" href="{{ route('repeating_income.create') }}">{{ _lang('Add Repeating Income') }}</a>
             <a class="dropdown-item" href="{{ route('repeating_income.index') }}">{{ _lang('Repeating Income List') }}</a>
+            --}}  
+            <a class="dropdown-item" href="{{ route('expense.index') }}">{{ _lang('Expense') }}</a>
+            <a class="dropdown-item" href="{{ route('expense.expense_calendar') }}">{{ _lang('Expense Calendar') }}</a>
             <a class="dropdown-item" href="{{ route('repeating_expense.create') }}">{{ _lang('Add Repeating Expense') }}</a>
             <a class="dropdown-item" href="{{ route('repeating_expense.index') }}">{{ _lang('Repeating Expense List') }}</a>
+            <a class="dropdown-item" href="{{ route('chart_of_accounts.index') }}">{{ _lang('Income & Expense Types') }}</a>
+            <a class="dropdown-item" href="{{ route('payment_methods.index') }}">{{ _lang('Payment Methods') }}</a>
+            <a class="dropdown-item" href="{{ route('taxs.index') }}">{{ _lang('Tax Settings') }}</a>
         </div>
     </li>
 
@@ -78,9 +74,7 @@
             <i class="bx bx-home-circle me-2"></i><span key="t-dashboards">{{ _lang('Transaction Settings') }}</span> <div class="arrow-down"></div>
         </a>
         <div class="dropdown-menu" aria-labelledby="topnav-dashboard">
-            <a class="dropdown-item" href="{{ route('chart_of_accounts.index') }}">{{ _lang('Income & Expense Types') }}</a>
-            <a class="dropdown-item" href="{{ route('payment_methods.index') }}">{{ _lang('Payment Methods') }}</a>
-            <a class="dropdown-item" href="{{ route('taxs.index') }}">{{ _lang('Tax Settings') }}</a>
+            
         </div>
     </li>
 
