@@ -122,14 +122,14 @@
                     <!-- App Search-->
                     <form class="app-search d-none d-lg-block">
                         <div class="position-relative">
-                            <input type="text" class="form-control" placeholder="<?php echo $language["Search"]; ?>">
+                            <input type="text" class="form-control" placeholder="Search">
                             <span class="bx bx-search-alt"></span>
                         </div>
                     </form>
         
                     <div class="dropdown dropdown-mega d-none d-lg-block ms-2">
                         <button type="button" class="btn header-item waves-effect" data-bs-toggle="dropdown" aria-haspopup="false" aria-expanded="false">
-                            <span key="t-megamenu"><?php echo $language["Mega_Menu"]; ?></span>
+                            <span key="t-megamenu">Mega_Menu</span>
                             <i class="mdi mdi-chevron-down"></i> 
                         </button>
                         <div class="dropdown-menu dropdown-megamenu">
@@ -138,79 +138,79 @@
             
                                     <div class="row">
                                         <div class="col-md-4">
-                                            <h5 class="font-size-14 mt-0" key="t-ui-components"><?php echo $language["UI_Components"]; ?></h5>
+                                            <h5 class="font-size-14 mt-0" key="t-ui-components">UI_Components</h5>
                                             <ul class="list-unstyled megamenu-list">
                                                 <li>
-                                                    <a href="javascript:void(0);" key="t-lightbox"><?php echo $language["Lightbox"]; ?></a>
+                                                    <a href="javascript:void(0);" key="t-lightbox">Lightbox</a>
                                                 </li>
                                                 <li>
-                                                    <a href="javascript:void(0);" key="t-range-slider"><?php echo $language["Range_Slider"]; ?></a>
+                                                    <a href="javascript:void(0);" key="t-range-slider">Range_Slider</a>
                                                 </li>
                                                 <li>
-                                                    <a href="javascript:void(0);" key="t-sweet-alert"><?php echo $language["Sweet_Alert"]; ?></a>
+                                                    <a href="javascript:void(0);" key="t-sweet-alert">Sweet_Alert</a>
                                                 </li>
                                                 <li>
-                                                    <a href="javascript:void(0);" key="t-rating"><?php echo $language["Rating"]; ?></a>
+                                                    <a href="javascript:void(0);" key="t-rating">Rating</a>
                                                 </li>
                                                 <li>
-                                                    <a href="javascript:void(0);" key="t-forms"><?php echo $language["Forms"]; ?></a>
+                                                    <a href="javascript:void(0);" key="t-forms">Forms</a>
                                                 </li>
                                                 <li>
-                                                    <a href="javascript:void(0);" key="t-tables"><?php echo $language["Tables"]; ?></a>
+                                                    <a href="javascript:void(0);" key="t-tables">Tables</a>
                                                 </li>
                                                 <li>
-                                                    <a href="javascript:void(0);" key="t-charts"><?php echo $language["Charts"]; ?></a>
+                                                    <a href="javascript:void(0);" key="t-charts">Charts</a>
                                                 </li>
                                             </ul>
                                         </div>
         
                                         <div class="col-md-4">
-                                            <h5 class="font-size-14 mt-0" key="t-applications"><?php echo $language["Applications"]; ?></h5>
+                                            <h5 class="font-size-14 mt-0" key="t-applications">Applications</h5>
                                             <ul class="list-unstyled megamenu-list">
                                                 <li>
-                                                    <a href="javascript:void(0);" key="t-ecommerce"><?php echo $language["Ecommerce"]; ?></a>
+                                                    <a href="javascript:void(0);" key="t-ecommerce">Ecommerce</a>
                                                 </li>
                                                 <li>
-                                                    <a href="javascript:void(0);" key="t-calendar"><?php echo $language["Calendar"]; ?></a>
+                                                    <a href="javascript:void(0);" key="t-calendar">Calendar</a>
                                                 </li>
                                                 <li>
-                                                    <a href="javascript:void(0);" key="t-email"><?php echo $language["Email"]; ?></a>
+                                                    <a href="javascript:void(0);" key="t-email">Email</a>
                                                 </li>
                                                 <li>
-                                                    <a href="javascript:void(0);" key="t-projects"><?php echo $language["Projects"]; ?></a>
+                                                    <a href="javascript:void(0);" key="t-projects">Projects</a>
                                                 </li>
                                                 <li>
-                                                    <a href="javascript:void(0);" key="t-tasks"><?php echo $language["Tasks"]; ?></a>
+                                                    <a href="javascript:void(0);" key="t-tasks">Tasks</a>
                                                 </li>
                                                 <li>
-                                                    <a href="javascript:void(0);" key="t-contacts"><?php echo $language["Contacts"]; ?></a>
+                                                    <a href="javascript:void(0);" key="t-contacts">Contacts</a>
                                                 </li>
                                             </ul>
                                         </div>
         
                                         <div class="col-md-4">
-                                            <h5 class="font-size-14 mt-0" key="t-extra-pages"><?php echo $language["Extra_Pages"]; ?></h5>
+                                            <h5 class="font-size-14 mt-0" key="t-extra-pages">Extra_Pages</h5>
                                             <ul class="list-unstyled megamenu-list">
                                                 <li>
-                                                    <a href="javascript:void(0);" key="t-light-sidebar"><?php echo $language["Light_Sidebar"]; ?></a>
+                                                    <a href="javascript:void(0);" key="t-light-sidebar">Light_Sidebar</a>
                                                 </li>
                                                 <li>
-                                                    <a href="javascript:void(0);" key="t-compact-sidebar"><?php echo $language["Compact_Sidebar"]; ?></a>
+                                                    <a href="javascript:void(0);" key="t-compact-sidebar">Compact_Sidebar</a>
                                                 </li>
                                                 <li>
-                                                    <a href="javascript:void(0);" key="t-horizontal"><?php echo $language["Horizontal_layout"]; ?></a>
+                                                    <a href="javascript:void(0);" key="t-horizontal">Horizontal_layout</a>
                                                 </li>
                                                 <li>
-                                                    <a href="javascript:void(0);" key="t-maintenance"><?php echo $language["Maintenance"]; ?></a>
+                                                    <a href="javascript:void(0);" key="t-maintenance">Maintenance</a>
                                                 </li>
                                                 <li>
-                                                    <a href="javascript:void(0);" key="t-coming-soon"><?php echo $language["Coming_Soon"]; ?></a>
+                                                    <a href="javascript:void(0);" key="t-coming-soon">Coming_Soon</a>
                                                 </li>
                                                 <li>
-                                                    <a href="javascript:void(0);" key="t-timeline"><?php echo $language["Timeline"]; ?></a>
+                                                    <a href="javascript:void(0);" key="t-timeline">Timeline</a>
                                                 </li>
                                                 <li>
-                                                    <a href="javascript:void(0);" key="t-faqs"><?php echo $language["FAQs"]; ?></a>
+                                                    <a href="javascript:void(0);" key="t-faqs">FAQs</a>
                                                 </li>
                                     
                                             </ul>
@@ -220,28 +220,28 @@
                                 <div class="col-sm-4">
                                     <div class="row">
                                         <div class="col-sm-6">
-                                            <h5 class="font-size-14 mt-0" key="t-ui-components"><?php echo $language["UI_Components"]; ?></h5>
+                                            <h5 class="font-size-14 mt-0" key="t-ui-components">UI_Components</h5>
                                             <ul class="list-unstyled megamenu-list">
                                                 <li>
-                                                    <a href="javascript:void(0);" key="t-lightbox"><?php echo $language["Lightbox"]; ?></a>
+                                                    <a href="javascript:void(0);" key="t-lightbox">Lightbox</a>
                                                 </li>
                                                 <li>
-                                                    <a href="javascript:void(0);" key="t-range-slider"><?php echo $language["Range_Slider"]; ?></a>
+                                                    <a href="javascript:void(0);" key="t-range-slider">Range_Slider</a>
                                                 </li>
                                                 <li>
-                                                    <a href="javascript:void(0);" key="t-sweet-alert"><?php echo $language["Sweet_Alert"]; ?></a>
+                                                    <a href="javascript:void(0);" key="t-sweet-alert">Sweet_Alert</a>
                                                 </li>
                                                 <li>
-                                                    <a href="javascript:void(0);" key="t-rating"><?php echo $language["Rating"]; ?></a>
+                                                    <a href="javascript:void(0);" key="t-rating">Rating</a>
                                                 </li>
                                                 <li>
-                                                    <a href="javascript:void(0);" key="t-forms"><?php echo $language["Forms"]; ?></a>
+                                                    <a href="javascript:void(0);" key="t-forms">Forms</a>
                                                 </li>
                                                 <li>
-                                                    <a href="javascript:void(0);" key="t-tables"><?php echo $language["Tables"]; ?></a>
+                                                    <a href="javascript:void(0);" key="t-tables">Tables</a>
                                                 </li>
                                                 <li>
-                                                    <a href="javascript:void(0);" key="t-charts"><?php echo $language["Charts"]; ?></a>
+                                                    <a href="javascript:void(0);" key="t-charts">Charts</a>
                                                 </li>
                                             </ul>
                                         </div>
@@ -398,10 +398,10 @@
                             <div class="p-3">
                                 <div class="row align-items-center">
                                     <div class="col">
-                                        <h6 class="m-0" key="t-notifications"> <?php echo $language["Notifications"]; ?> </h6>
+                                        <h6 class="m-0" key="t-notifications"> Notifications </h6>
                                     </div>
                                     <div class="col-auto">
-                                        <a href="#!" class="small" key="t-view-all"> <?php echo $language["View_All"]; ?></a>
+                                        <a href="#!" class="small" key="t-view-all"> View_All</a>
                                     </div>
                                 </div>
                             </div>
@@ -414,10 +414,10 @@
                                             </span>
                                         </div>
                                         <div class="media-body">
-                                            <h6 class="mt-0 mb-1" key="t-your-order"><?php echo $language["Your_order_is_placed"]; ?></h6>
+                                            <h6 class="mt-0 mb-1" key="t-your-order">Your_order_is_placed</h6>
                                             <div class="font-size-12 text-muted">
-                                                <p class="mb-1" key="t-grammer"><?php echo $language["languages_grammar"]; ?></p>
-                                                <p class="mb-0"><i class="mdi mdi-clock-outline"></i> <span key="t-min-ago"><?php echo $language["3_min_ago"]; ?></span></p>
+                                                <p class="mb-1" key="t-grammer">languages_grammar</p>
+                                                <p class="mb-0"><i class="mdi mdi-clock-outline"></i> <span key="t-min-ago">3_min_ago</span></p>
                                             </div>
                                         </div>
                                     </div>
@@ -429,8 +429,8 @@
                                         <div class="media-body">
                                             <h6 class="mt-0 mb-1">James Lemire</h6>
                                             <div class="font-size-12 text-muted">
-                                                <p class="mb-1" key="t-simplified"><?php echo $language["simplified_English"]; ?></p>
-                                                <p class="mb-0"><i class="mdi mdi-clock-outline"></i> <span key="t-hours-ago"><?php echo $language["1_hours_ago"]; ?></span></p>
+                                                <p class="mb-1" key="t-simplified">simplified_English</p>
+                                                <p class="mb-0"><i class="mdi mdi-clock-outline"></i> <span key="t-hours-ago">1_hours_ago</span></p>
                                             </div>
                                         </div>
                                     </div>
@@ -443,10 +443,10 @@
                                             </span>
                                         </div>
                                         <div class="media-body">
-                                            <h6 class="mt-0 mb-1" key="t-shipped"><?php echo $language["Your_item_is_shipped"]; ?></h6>
+                                            <h6 class="mt-0 mb-1" key="t-shipped">Your_item_is_shipped</h6>
                                             <div class="font-size-12 text-muted">
-                                                <p class="mb-1" key="t-grammer"><?php echo $language["several_grammar"]; ?></p>
-                                                <p class="mb-0"><i class="mdi mdi-clock-outline"></i> <span key="t-min-ago"><?php echo $language["3_min_ago"]; ?></span></p>
+                                                <p class="mb-1" key="t-grammer">several_grammar</p>
+                                                <p class="mb-0"><i class="mdi mdi-clock-outline"></i> <span key="t-min-ago">3_min_ago</span></p>
                                             </div>
                                         </div>
                                     </div>
@@ -459,8 +459,8 @@
                                         <div class="media-body">
                                             <h6 class="mt-0 mb-1">Salena Layfield</h6>
                                             <div class="font-size-12 text-muted">
-                                                <p class="mb-1" key="t-occidental"><?php echo $language["Cambridge_occidental"]; ?></p>
-                                                <p class="mb-0"><i class="mdi mdi-clock-outline"></i> <span key="t-hours-ago"><?php echo $language["1_hours_ago"]; ?></span></p>
+                                                <p class="mb-1" key="t-occidental">Cambridge_occidental</p>
+                                                <p class="mb-0"><i class="mdi mdi-clock-outline"></i> <span key="t-hours-ago">1_hours_ago</span></p>
                                             </div>
                                         </div>
                                     </div>
@@ -468,7 +468,7 @@
                             </div>
                             <div class="p-2 border-top d-grid">
                                 <a class="btn btn-sm btn-link font-size-14 text-center" href="javascript:void(0)">
-                                    <i class="mdi mdi-arrow-right-circle me-1"></i> <span key="t-view-more"><?php echo $language["View_More"]; ?></span> 
+                                    <i class="mdi mdi-arrow-right-circle me-1"></i> <span key="t-view-more">View_More</span> 
                                 </a>
                             </div>
                         </div>
@@ -484,12 +484,12 @@
                         </button>
                         <div class="dropdown-menu dropdown-menu-end">
                             <!-- item-->
-                            <a class="dropdown-item" href="#"><i class="bx bx-user font-size-16 align-middle me-1"></i> <span key="t-profile"><?php echo $language["Profile"]; ?></span></a>
-                            <a class="dropdown-item" href="#"><i class="bx bx-wallet font-size-16 align-middle me-1"></i> <span key="t-my-wallet"><?php echo $language["My_Wallet"]; ?></span></a>
-                            <a class="dropdown-item d-block" href="#"><span class="badge bg-success float-end">11</span><i class="bx bx-wrench font-size-16 align-middle me-1"></i> <span key="t-settings"><?php echo $language["Settings"]; ?></span></a>
-                            <a class="dropdown-item" href="#"><i class="bx bx-lock-open font-size-16 align-middle me-1"></i> <span key="t-lock-screen"><?php echo $language["Lock_screen"]; ?></span></a>
+                            <a class="dropdown-item" href="#"><i class="bx bx-user font-size-16 align-middle me-1"></i> <span key="t-profile">Profile</span></a>
+                            <a class="dropdown-item" href="#"><i class="bx bx-wallet font-size-16 align-middle me-1"></i> <span key="t-my-wallet">My_Wallet</span></a>
+                            <a class="dropdown-item d-block" href="#"><span class="badge bg-success float-end">11</span><i class="bx bx-wrench font-size-16 align-middle me-1"></i> <span key="t-settings">Settings</span></a>
+                            <a class="dropdown-item" href="#"><i class="bx bx-lock-open font-size-16 align-middle me-1"></i> <span key="t-lock-screen">Lock_screen</span></a>
                             <div class="dropdown-divider"></div>
-                            <a class="dropdown-item text-danger" href="logout.php"><i class="bx bx-power-off font-size-16 align-middle me-1 text-danger"></i> <span key="t-logout"><?php echo $language["Logout"]; ?></span></a>
+                            <a class="dropdown-item text-danger" href="logout.php"><i class="bx bx-power-off font-size-16 align-middle me-1 text-danger"></i> <span key="t-logout">Logout</span></a>
                         </div>
                     </div>
         
