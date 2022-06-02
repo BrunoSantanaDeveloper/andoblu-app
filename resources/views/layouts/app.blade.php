@@ -285,21 +285,7 @@
                     <div class="dropdown d-inline-block">
                         <button type="button" class="btn header-item waves-effect"
                         data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            <?php if ($lang == 'en') { ?>
-                                <img src="assets/images/flags/us.jpg" alt="Header Language" height="16" class="mr-1"> <span class="align-middle">English</span>
-                            <?php } ?>
-                            <?php if ($lang == 'es') { ?>
-                                <img src="assets/images/flags/spain.jpg" alt="Header Language" height="16" class="mr-1"> <span class="align-middle">Spanish</span>
-                            <?php } ?>
-                            <?php if ($lang == 'de') { ?>
-                                <img src="assets/images/flags/germany.jpg" alt="Header Language" height="16" class="mr-1"> <span class="align-middle">German</span>
-                            <?php } ?>
-                            <?php if ($lang == 'it') { ?>
-                                <img src="assets/images/flags/italy.jpg" alt="Header Language" height="16" class="mr-1"> <span class="align-middle">Italian</span>
-                            <?php } ?>
-                            <?php if ($lang == 'ru') { ?>
-                                <img src="assets/images/flags/russia.jpg" alt="Header Language" height="16" class="mr-1"> <span class="align-middle">Russian</span>
-                            <?php } ?>
+
                         </button>
                         <div class="dropdown-menu dropdown-menu-end">
         
