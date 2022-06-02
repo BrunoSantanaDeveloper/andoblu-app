@@ -101,7 +101,7 @@
                         <a href="{{ route('dashboard') }}" class="logo logo-dark">
                             <span class="logo-sm">
                                 {{-- <img src="assets/images/logo.svg" alt="" height="22"> --}}
-                                {{ get_option('site_title', config('app.name')) }}
+                                
                             </span>
                             <span class="logo-lg">
                                 {{-- <img src="assets/images/logo-dark.png" alt="" height="17"> --}}
@@ -112,11 +112,11 @@
                         <a href="{{ route('dashboard') }}" class="logo logo-light">
                             <span class="logo-sm">
                                 {{-- <img src="assets/images/logo-light.svg" alt="" height="22"> --}}
-                                {{ get_option('site_title', config('app.name')) }}
+                                A
                             </span>
                             <span class="logo-lg">
                                 {{-- <img src="assets/images/logo-light.png" alt="" height="19"> --}}
-                                A
+                                {{ get_option('site_title', config('app.name')) }}
                             </span>
                         </a>
                     </div>
@@ -228,7 +228,7 @@
                     <div class="dropdown d-inline-block">
                         <button type="button" class="btn header-item waves-effect" id="page-header-user-dropdown"
                         data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            <img class="rounded-circle header-profile-user" src="assets/images/users/avatar-1.jpg"
+                            <img class="rounded-circle header-profile-user" src="{{ asset('public/backend/assets/images/users/avatar-1.jpg') }}"
                                 alt="Header Avatar">
                             <span class="d-none d-xl-inline-block ms-1" key="t-henry">{{ Auth::user()->name }}</span>
                             <i class="mdi mdi-chevron-down d-none d-xl-inline-block"></i>
