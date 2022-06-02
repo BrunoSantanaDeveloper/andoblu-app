@@ -68,16 +68,6 @@
         </div>
     </li>
 
-    <li class="nav-item dropdown" id="transaction_settings">
-        <a class="nav-link dropdown-toggle arrow-none" href="#" id="topnav-dashboard" role="button"
-            >
-            <i class="bx bx-home-circle me-2"></i><span key="t-dashboards">{{ _lang('Transaction Settings') }}</span> <div class="arrow-down"></div>
-        </a>
-        <div class="dropdown-menu" aria-labelledby="topnav-dashboard">
-            
-        </div>
-    </li>
-
     {{-- Modelo de Menu com 3 níveis --}}
     <li class="nav-item dropdown" hidden>
         <a class="nav-link dropdown-toggle arrow-none" href="#" id="topnav-uielement" role="button"
