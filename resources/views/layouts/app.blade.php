@@ -260,27 +260,19 @@
     <!--Header Nav-->
     
 
-    <div id="layoutSidenav" class="container-fluid d-flex align-items-stretch">
-        <div id="layoutSidenav_nav">
-            <span class="close-mobile-nav"><i class="ti-close"></i></span>
-            <nav class="sb-sidenav accordion sb-sidenav-light" id="sidenavAccordion">
-
-                <div class="sidebar-user">
-                    <a href="javascript: void(0);">
-                        <img src="{{ profile_picture() }}" alt="user-image" height="42"
-                            class="rounded-circle shadow-sm">
-                        <span class="sidebar-user-name">{{ Auth::user()->name }}</span>
-                    </a>
-                </div>
-
-                <div class="sb-sidenav-menu">
-                    <div class="nav">
-                        @include('layouts.menus.'.Auth::user()->user_type)
-                    </div>
+    <div class="topnav">
+        <div class="container-fluid">
+            <nav class="navbar navbar-light navbar-expand-lg topnav-menu">
+    
+                <div class="collapse navbar-collapse" id="topnav-menu-content">
+                    @include('layouts.menus.'.Auth::user()->user_type)
                 </div>
             </nav>
         </div>
-        <!--ENd layoutSidenav_nav-->
+    </div>
+
+    <div id="layoutSidenav" class="container-fluid d-flex align-items-stretch">
+        
 
         <div id="layoutSidenav_content">
             <main>
