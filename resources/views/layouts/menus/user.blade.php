@@ -187,8 +187,6 @@
         <a class="nav-link" href="{{ route('sales_returns.index') }}">{{ _lang('Sales Return') }}</a>
     </nav>
 </div>
-</div>
-
 
 <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#sales" aria-expanded="false"
     aria-controls="collapseLayouts">
@@ -204,12 +202,6 @@
         <a class="nav-link" href="{{ route('quotations.index') }}">{{ _lang('Quotation List') }}</a>
     </nav>
 </div>
-
-
-
-
-
-
 
 <div class="sb-sidenav-menu-heading">{{ _lang('Company Settings') }}</div>
 
@@ -244,4 +236,6 @@
 
 
 
+
+</div>
 
