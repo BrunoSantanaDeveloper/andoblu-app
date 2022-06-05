@@ -301,6 +301,15 @@
     </div>
     <!--End layoutSidenav-->
 
+    <div class="main-content">
+
+        <div class="page-content">
+        </div>
+        <!-- End Page-content -->
+        @include('layouts.footer')
+    </div>
+    <!-- end main content-->
+
 
     <!-- Core Js  -->
     <script src="{{ asset('public/backend/assets/js/jquery-3.6.0.min.js') }}"></script>

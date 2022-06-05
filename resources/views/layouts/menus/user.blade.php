@@ -2,7 +2,7 @@
 
     <li class="nav-item">
         <a class="nav-link dropdown-toggle" href="{{ route('dashboard') }}" id="topnav-dashboard" role="button">
-            <i class="bx bx-home-circle me-2"></i><span key="t-dashboards">{{ _lang('Dashboard') }}</span> <div class="arrow-down"></div>
+            <i class="bx bx-home-circle me-2"></i><span key="t-dashboards">{{ _lang('Dashboard') }}</span> 
         </a>
     </li>
     
