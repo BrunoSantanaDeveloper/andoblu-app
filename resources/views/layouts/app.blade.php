@@ -271,12 +271,10 @@
         </div>
     </div>
 
-    <div id="layoutSidenav" class="container-fluid d-flex align-items-stretch">
-        
+    <div class="main-content">
 
-        <div id="layoutSidenav_content">
-            <main>
-                @if(get_option('membership_system') == 'enabled' && Auth::user()->user_type == 'user')
+        <div class="page-content">
+            @if(get_option('membership_system') == 'enabled' && Auth::user()->user_type == 'user')
                     @if( Auth::user()->valid_to < date('Y-m-d'))
                         <div class="alert alert-danger">
                             <b>{{ _lang('Your membership has expired. Please renew your membership !') }}</b>
@@ -291,19 +289,8 @@
 					</button>
                     <span class="msg"></span>
                 </div>
-
-                @yield('content')
-            </main>
-
-        </div>
-        <!--End layoutSidenav_content-->
-
-    </div>
-    <!--End layoutSidenav-->
-
-    <div class="main-content">
-
-        <div class="page-content">
+            
+            @yield('content')
         </div>
         <!-- End Page-content -->
         @include('layouts.footer')
