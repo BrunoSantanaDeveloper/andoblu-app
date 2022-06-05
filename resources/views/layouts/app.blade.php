@@ -274,7 +274,8 @@
     <div class="main-content">
 
         <div class="page-content">
-            @if(get_option('membership_system') == 'enabled' && Auth::user()->user_type == 'user')
+            <div class="container-fluid">
+                @if(get_option('membership_system') == 'enabled' && Auth::user()->user_type == 'user')
                     @if( Auth::user()->valid_to < date('Y-m-d'))
                         <div class="alert alert-danger">
                             <b>{{ _lang('Your membership has expired. Please renew your membership !') }}</b>
@@ -291,6 +292,8 @@
                 </div>
             
             @yield('content')
+            </div>
+            
         </div>
         <!-- End Page-content -->
         @include('layouts.footer')
