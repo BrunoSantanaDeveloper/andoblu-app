@@ -102,7 +102,7 @@
                             @endforeach
                     
                 </ul>
-                <div class="text-center mt-4"><a href="{{ route('expense.list') }}" class="btn btn-primary waves-effect waves-light btn-sm">Ver todas as despesas<i class="mdi mdi-arrow-right ms-1"></i></a></div>
+                <div class="text-center mt-4"><a href="{{ route('expense.index') }}" class="btn btn-primary waves-effect waves-light btn-sm">Ver todas as despesas<i class="mdi mdi-arrow-right ms-1"></i></a></div>
             </div>
         </div>
     </div>
