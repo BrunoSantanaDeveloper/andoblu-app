@@ -80,7 +80,7 @@
                                 </td>
                             </tr>
 
-                            <li class="event-list {{ $transaction->trans_date == date('d/m/Y') ? 'active'}}">
+                            <li class='event-list {{ $transaction->trans_date == date("d/m/Y") ? "active"}}'>
                                 <div class="event-timeline-dot">
                                     <i class='bx bxs-right-arrow-circle font-size-18 {{ $transaction->trans_date == date("d/m/Y") ? "bx-fade-right"}} '></i>
                                 </div>
