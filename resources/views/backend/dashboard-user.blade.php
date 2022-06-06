@@ -67,49 +67,33 @@
                 <h4 class="card-title mb-5">Despesas da Semana</h4>
                 <ul class="verti-timeline list-unstyled">
 
-                    @foreach($latest_income as $transaction)
-                            <tr id="row_{{ $transaction->id }}">
-                                <td class='trans_date'>{{ $transaction->trans_date }}</td>
-                                <td class='chart_id'>
-                                    {{ isset($transaction->income_type->name) ? $transaction->income_type->name : _lang('Transfer') }}
-                                </td>
-                                <td class='amount text-right'>{{ decimalPlace($transaction->amount, $currency) }}
-                                </td>
-                                <td class="text-center">
-                                    <a href="{{action('IncomeController@show', $transaction['id'])}}"
-                                        data-title="{{ _lang('View Income') }}"
-                                        class="btn btn-light btn-sm ajax-modal">{{ _lang('View Details') }}</a>
-                                </td>
-                            </tr>
-                            @endforeach
+                
 
-                    @foreach($latest_income as $transaction)
+                    @foreach($latest_expense as $expense)
                            
-                            <li  id="row_{{ $transaction->id }}" class="event-list {{ isset($transaction->trans_date)== date('d/m/Y') ? 'active' : '' }}" >
+                            <li  id="row_{{ $expense->id }}" class="event-list {{ isset($expense->trans_date)== date('d/m/Y') ? 'active' : '' }}" >
                                 <div class="event-timeline-dot">
-                                    <i class="bx bxs-right-arrow-circle font-size-18 {{ isset($transaction->trans_date)== date('d/m/Y') ? 'bx-fade-right' : '' }} "></i>
+                                    <i class="bx bxs-right-arrow-circle font-size-18 {{ isset($expense->trans_date)== date('d/m/Y') ? 'bx-fade-right' : '' }} "></i>
                                 </div>
                             
                                 <div class="d-flex">
                                     <div class="me-3">
-                                        <h5 class="font-size-14">{{ $transaction->trans_date }}08 Jun<i class="bx bx-right-arrow-alt font-size-16 text-primary align-middle ms-2"></i></h5>
+                                        <h5 class="font-size-14">{{ $expense->trans_date }}<i class="bx bx-right-arrow-alt font-size-16 text-primary align-middle ms-2"></i></h5>
                                     </div>
                                     <div class="flex-grow-1">
                                         <div>
-                                            {{ isset($transaction->income_type->name) ? $transaction->income_type->name : _lang('Transfer') }}
+                                            {{ isset($expense->expense_type->name) ? $expense->expense_type->name : _lang('Transfer') }}
                                         </div>
                                     </div>
                                     <div class="flex-grow-1">
                                         <div>
-                                            {{ decimalPlace($transaction->amount, $currency) }}
+                                            {{ decimalPlace($expense->amount, $currency) }}
                                         </div>
                                     </div>
                                     <div class="flex-grow-1">
-                                        <div>
-                                            <a href="{{action('IncomeController@show', $transaction['id'])}}"
-                                        data-title="{{ _lang('View Income') }}"
-                                        class="btn btn-light btn-sm ajax-modal">{{ _lang('View Details') }}</a>
-                                        </div>
+                                        <a href="{{action('ExpenseController@show', $expense['id'])}}"
+                                data-title="{{ _lang('View Expense') }}"
+                                class="btn btn-light btn-sm ajax-modal">{{ _lang('View Details') }}</a>
                                     </div>
                                 </div>
                             </li>
