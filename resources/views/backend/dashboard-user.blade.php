@@ -80,7 +80,7 @@
                                 </td>
                             </tr>
 
-                            <li class="event-list " {{ isset($transaction->income_type->name) ? $transaction->income_type->name : _lang('Transfer') }}>
+                            <li class="event-list " {{ isset($transaction->trans_date) ? $transaction->income_type->name : _lang('Transfer') }}>
                                 <div class="event-timeline-dot">
                                     <i class="bx bxs-right-arrow-circle font-size-18 {{ $transaction->trans_date == '06/06/2022' ? 'bx-fade-right'}} "></i>
                                 </div>
