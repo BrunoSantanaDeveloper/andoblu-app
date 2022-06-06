@@ -18,7 +18,7 @@
                         </div>
                     </div>
                     <div class="col-5 align-self-end">
-                        <img src="assets/images/profile-img.png" alt="" class="img-fluid">
+                        <img src="{{ profile_picture() }}" alt="" class="img-fluid">
                     </div>
                 </div>
             </div>
@@ -26,7 +26,7 @@
                 <div class="row">
                     <div class="col-sm-3 col-md-2">
                         <div class="avatar-md profile-user-wid ">
-                            <img src="assets/images/users/avatar-2.jpg" alt="" class="img-thumbnail rounded-circle">
+                            <img src="{{ profile_picture() }}" alt="" class="img-thumbnail rounded-circle">
                         </div>
                         
                         
