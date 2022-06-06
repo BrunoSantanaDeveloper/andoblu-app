@@ -78,7 +78,7 @@
                             
                                 <div class="d-flex">
                                     <div class="me-3">
-                                        <h5 class="font-size-14">{{ date('d/m',$expense->trans_date) }}<i class="bx bx-right-arrow-alt font-size-16 text-primary align-middle ms-2"></i></h5>
+                                        <h5 class="font-size-14">{{ date('d/m',strtotime($expense->trans_date)) }}<i class="bx bx-right-arrow-alt font-size-16 text-primary align-middle ms-2"></i></h5>
                                     </div>
                                     <div class="flex-grow-1">
                                         <div>
