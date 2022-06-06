@@ -80,20 +80,22 @@
                                     <div class="me-3">
                                         <h5 class="font-size-14">{{ date('d/m',strtotime($expense->trans_date)) }}<i class="bx bx-right-arrow-alt font-size-16 text-primary align-middle ms-2"></i></h5>
                                     </div>
-                                    <div class="flex-grow-1">
+                                    <div class=""me-3">
                                         <div>
                                             {{ isset($expense->expense_type->name) ? $expense->expense_type->name : _lang('Transfer') }}
                                         </div>
-                                    </div>
-                                    <div class="flex-grow-1">
                                         <div>
                                             {{ decimalPlace($expense->amount, $currency) }}
                                         </div>
                                     </div>
-                                    <div class="flex-grow-1">
-                                        <a href="{{action('ExpenseController@show', $expense['id'])}}"
+                    
+                                    <div class="me-3">
+                                        <div>
+                                            <a href="{{action('ExpenseController@show', $expense['id'])}}"
                                 data-title="{{ _lang('View Expense') }}"
                                 class="btn btn-light btn-sm ajax-modal">{{ _lang('View Details') }}</a>
+                                        </div>
+                                        
                                     </div>
                                 </div>
                             </li>
