@@ -5,6 +5,119 @@
 
 @php $currency = currency(); @endphp
 
+
+<div class="row">
+    <div class="col-xl-4">
+        <div class="card overflow-hidden">
+            <div class="bg-primary bg-soft">
+                <div class="row">
+                    <div class="col-7">
+                        <div class="text-primary p-3">
+                            <h5 class="text-primary">Olá Bruno</h5>
+                            <p>Plano: VIP</p>
+                        </div>
+                    </div>
+                    <div class="col-5 align-self-end">
+                        <img src="assets/images/profile-img.png" alt="" class="img-fluid">
+                    </div>
+                </div>
+            </div>
+            <div class="card-body pt-0">
+                <div class="row">
+                    <div class="col-sm-3 col-md-2">
+                        <div class="avatar-md profile-user-wid ">
+                            <img src="assets/images/users/avatar-2.jpg" alt="" class="img-thumbnail rounded-circle">
+                        </div>
+                        
+                        
+                    </div>
+
+                    <div class="col-sm-8 col-md-10">
+                        <div class="pt-4">
+
+                            <div class="row">
+                                <div class="col-6 text-center">
+                                    <h5 class="font-size-18">R$ 10.302,00</h5>
+                                    <p class="text-muted mb-0">Saldo em conta</p>
+<div class="mt-4">
+                                <a href="" class="btn btn-primary waves-effect waves-light btn-sm">Depositar<i class="mdi mdi-arrow-right ms-1"></i></a>
+                            </div>
+                                </div>
+                                <div class="col-6 text-center">
+                                    <h5 class="font-size-18">R$ 1.245,00</h5>
+                                    <p class="text-muted mb-0">Despesas Junho</p>
+<div class="mt-4">
+                                <a href="" class="btn btn-primary waves-effect waves-light btn-sm">Nova Despesa<i class="mdi mdi-arrow-right ms-1"></i></a>
+                            </div>
+                                </div>
+                            </div>
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="card">
+            
+        </div>
+    </div>
+    <div class="col-xl-8">
+        <div class="card">
+            <div class="card-body">
+                <h4 class="card-title mb-5">Despesas da Semana</h4>
+                <ul class="verti-timeline list-unstyled">
+                    <li class="event-list active">
+                        <div class="event-timeline-dot">
+                            <i class="bx bxs-right-arrow-circle font-size-18 bx-fade-right"></i>
+                        </div>
+                        <div class="d-flex">
+                            <div class="me-3">
+                                <h5 class="font-size-14">08 Jun<i class="bx bx-right-arrow-alt font-size-16 text-primary align-middle ms-2"></i></h5>
+                            </div>
+                            <div class="flex-grow-1">
+                                <div>
+                                    Joined the group “Boardsmanship Forum”
+                                </div>
+                            </div>
+                        </div>
+                    </li><li class="event-list">
+                        <div class="event-timeline-dot">
+                            <i class="bx bx-right-arrow-circle font-size-18"></i>
+                        </div>
+                        <div class="d-flex">
+                            <div class="me-3">
+                                <h5 class="font-size-14">07 Jun<i class="bx bx-right-arrow-alt font-size-16 text-primary align-middle ms-2"></i></h5>
+                            </div>
+                            <div class="flex-grow-1">
+                                <div>
+                                    Responded to need “Volunteer Activities
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="event-list">
+                        <div class="event-timeline-dot">
+                            <i class="bx bx-right-arrow-circle font-size-18"></i>
+                        </div>
+                        <div class="d-flex">
+                            <div class="me-3">
+                                <h5 class="font-size-14">08 Jun <i class="bx bx-right-arrow-alt font-size-16 text-primary align-middle ms-2"></i></h5>
+                            </div>
+                            <div class="flex-grow-1">
+                                <div>
+                                    Everyone realizes why a new common language would be desirable... <a href="#">Read more</a>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    
+                    
+                </ul>
+                <div class="text-center mt-4"><a href="" class="btn btn-primary waves-effect waves-light btn-sm">Ver todas as despesas<i class="mdi mdi-arrow-right ms-1"></i></a></div>
+            </div>
+        </div>
+    </div>
+</div>
 <div class="row">
     <div class="col-xl-3 col-md-6">
         <div class="card mb-4">
