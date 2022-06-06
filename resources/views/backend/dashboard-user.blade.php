@@ -47,7 +47,7 @@
                                     <h5 class="font-size-18">R$ 1.245,00</h5>
                                     <p class="text-muted mb-0">Despesas Junho</p>
 <div class="mt-4">
-                                <a href="" class="btn btn-primary waves-effect waves-light btn-sm">Nova Despesa<i class="mdi mdi-arrow-right ms-1"></i></a>
+                                <a href="{{ route('expense.create') }}" class="btn btn-primary waves-effect waves-light btn-sm">Nova Despesa<i class="mdi mdi-arrow-right ms-1"></i></a>
                             </div>
                                 </div>
                             </div>
@@ -102,7 +102,7 @@
                             @endforeach
                     
                 </ul>
-                <div class="text-center mt-4"><a href="" class="btn btn-primary waves-effect waves-light btn-sm">Ver todas as despesas<i class="mdi mdi-arrow-right ms-1"></i></a></div>
+                <div class="text-center mt-4"><a href="{{ route('expense.list') }}" class="btn btn-primary waves-effect waves-light btn-sm">Ver todas as despesas<i class="mdi mdi-arrow-right ms-1"></i></a></div>
             </div>
         </div>
     </div>
