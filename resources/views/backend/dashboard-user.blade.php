@@ -107,7 +107,7 @@
         </div>
     </div>
 </div>
-<div class="row">
+<div class="row" hidden>
     <div class="col-xl-3 col-md-6">
         <div class="card mb-4">
             <div class="card-body">
@@ -145,7 +145,7 @@
     </div>
 </div>
 
-<div class="row">
+<div class="row" hidden>
     <div class="col-xl-12">
         <div class="card mb-4">
             <div class="card-header">
@@ -158,7 +158,7 @@
     </div>
 </div>
 
-<div class="row">
+<div class="row" hidden>
     <div class="col-xl-6">
         <div class="card mb-4">
             <div class="card-header">
@@ -241,7 +241,7 @@
 </div>
 
 
-<div class="row">
+<div class="row" hidden>
     <div class="col-xl-6">
         <div class="card mb-4">
             <div class="card-header">
