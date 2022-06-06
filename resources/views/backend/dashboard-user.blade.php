@@ -69,18 +69,23 @@
 
                     @foreach($latest_income as $transaction)
                             <tr id="row_{{ $transaction->id }}">
-                                <td class='trans_date'></td>
+                                <td class='trans_date'>{{ $transaction->trans_date }}</td>
                                 <td class='chart_id'>
-                                    
+                                    {{ isset($transaction->income_type->name) ? $transaction->income_type->name : _lang('Transfer') }}
                                 </td>
-                                <td class='amount text-right'>
+                                <td class='amount text-right'>{{ decimalPlace($transaction->amount, $currency) }}
                                 </td>
                                 <td class="text-center">
-                                    
+                                    <a href="{{action('IncomeController@show', $transaction['id'])}}"
+                                        data-title="{{ _lang('View Income') }}"
+                                        class="btn btn-light btn-sm ajax-modal">{{ _lang('View Details') }}</a>
                                 </td>
                             </tr>
+                            @endforeach
 
-                            <li class="event-list {{ isset($transaction->trans_date)== date('d/m/Y') ? 'active' : '' }}" >
+                    @foreach($latest_income as $transaction)
+                           
+                            <li  id="row_{{ $transaction->id }}" class="event-list {{ isset($transaction->trans_date)== date('d/m/Y') ? 'active' : '' }}" >
                                 <div class="event-timeline-dot">
                                     <i class="bx bxs-right-arrow-circle font-size-18 {{ isset($transaction->trans_date)== date('d/m/Y') ? 'bx-fade-right' : '' }} "></i>
                                 </div>
