@@ -66,51 +66,49 @@
             <div class="card-body">
                 <h4 class="card-title mb-5">Despesas da Semana</h4>
                 <ul class="verti-timeline list-unstyled">
-                    <li class="event-list active">
-                        <div class="event-timeline-dot">
-                            <i class="bx bxs-right-arrow-circle font-size-18 bx-fade-right"></i>
-                        </div>
-                        <div class="d-flex">
-                            <div class="me-3">
-                                <h5 class="font-size-14">08 Jun<i class="bx bx-right-arrow-alt font-size-16 text-primary align-middle ms-2"></i></h5>
-                            </div>
-                            <div class="flex-grow-1">
-                                <div>
-                                    Joined the group “Boardsmanship Forum”
+
+                    @foreach($latest_income as $transaction)
+                            <tr id="row_{{ $transaction->id }}">
+                                <td class='trans_date'></td>
+                                <td class='chart_id'>
+                                    
+                                </td>
+                                <td class='amount text-right'>
+                                </td>
+                                <td class="text-center">
+                                    
+                                </td>
+                            </tr>
+
+                            <li class="event-list {{ $transaction->trans_date==date('d/m/Y') ? 'active'}}">
+                                <div class="event-timeline-dot">
+                                    <i class="bx bxs-right-arrow-circle font-size-18 {{ $transaction->trans_date==date('d/m/Y') ? 'bx-fade-right'}} "></i>
                                 </div>
-                            </div>
-                        </div>
-                    </li><li class="event-list">
-                        <div class="event-timeline-dot">
-                            <i class="bx bx-right-arrow-circle font-size-18"></i>
-                        </div>
-                        <div class="d-flex">
-                            <div class="me-3">
-                                <h5 class="font-size-14">07 Jun<i class="bx bx-right-arrow-alt font-size-16 text-primary align-middle ms-2"></i></h5>
-                            </div>
-                            <div class="flex-grow-1">
-                                <div>
-                                    Responded to need “Volunteer Activities
+                            
+                                <div class="d-flex">
+                                    <div class="me-3">
+                                        <h5 class="font-size-14">{{ $transaction->trans_date }}08 Jun<i class="bx bx-right-arrow-alt font-size-16 text-primary align-middle ms-2"></i></h5>
+                                    </div>
+                                    <div class="flex-grow-1">
+                                        <div>
+                                            {{ isset($transaction->income_type->name) ? $transaction->income_type->name : _lang('Transfer') }}
+                                        </div>
+                                    </div>
+                                    <div class="flex-grow-1">
+                                        <div>
+                                            {{ decimalPlace($transaction->amount, $currency) }}
+                                        </div>
+                                    </div>
+                                    <div class="flex-grow-1">
+                                        <div>
+                                            <a href="{{action('IncomeController@show', $transaction['id'])}}"
+                                        data-title="{{ _lang('View Income') }}"
+                                        class="btn btn-light btn-sm ajax-modal">{{ _lang('View Details') }}</a>
+                                        </div>
+                                    </div>
                                 </div>
-                            </div>
-                        </div>
-                    </li>
-                    <li class="event-list">
-                        <div class="event-timeline-dot">
-                            <i class="bx bx-right-arrow-circle font-size-18"></i>
-                        </div>
-                        <div class="d-flex">
-                            <div class="me-3">
-                                <h5 class="font-size-14">08 Jun <i class="bx bx-right-arrow-alt font-size-16 text-primary align-middle ms-2"></i></h5>
-                            </div>
-                            <div class="flex-grow-1">
-                                <div>
-                                    Everyone realizes why a new common language would be desirable... <a href="#">Read more</a>
-                                </div>
-                            </div>
-                        </div>
-                    </li>
-                    
+                            </li>
+                            @endforeach
                     
                 </ul>
                 <div class="text-center mt-4"><a href="" class="btn btn-primary waves-effect waves-light btn-sm">Ver todas as despesas<i class="mdi mdi-arrow-right ms-1"></i></a></div>
