@@ -74,6 +74,8 @@
                             <li  id="row_{{ $expense->id }}" class="event-list {{ isset($expense->trans_date) == date('Y-m-d') ? 'active' : '' }}" >
                                 <div class="event-timeline-dot">
                                     <i class="bx bxs-right-arrow-circle font-size-18 {{ isset($expense->trans_date) == date('Y-m-d') ? 'bx-fade-right' : '' }} "></i>
+                                    {{ $expense->trans_date}}
+                                    {{date('Y-m-d')}}
                                 </div>
                             
                                 <div class="d-flex">
