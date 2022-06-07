@@ -77,10 +77,10 @@
                                 </div>
                             
                                 <div class="d-flex">
-                                    <div class="me-3">
+                                    <div class="col-md-2 me-3">
                                         <h5 class="font-size-14">{{ date('d/m',strtotime($expense->trans_date)) }}<i class="bx bx-right-arrow-alt font-size-16 text-primary align-middle ms-2"></i></h5>
                                     </div>
-                                    <div class="me-3">
+                                    <div class="col-md-8 me-3">
                                         <div>
                                             {{ isset($expense->expense_type->name) ? $expense->expense_type->name : _lang('Transfer') }}
                                         </div>
@@ -89,7 +89,7 @@
                                         </div>
                                     </div>
                     
-                                    <div class="me-3">
+                                    <div class="col-md-2 me-3">
                                         <div>
                                             <a href="{{action('ExpenseController@show', $expense['id'])}}"
                                 data-title="{{ _lang('View Expense') }}"
