@@ -71,14 +71,14 @@
 
                     @foreach($latest_expense as $expense)
                            
-                            <li  id="row_{{ $expense->id }}" class="event-list {{ isset($expense->trans_date)== date('d/m/Y') ? 'active' : '' }}" >
+                            <li  id="row_{{ $expense->id }}" class="event-list {{ isset($expense->trans_date) == date('Y-m-d') ? 'active' : '' }}" >
                                 <div class="event-timeline-dot">
-                                    <i class="bx bxs-right-arrow-circle font-size-18 {{ isset($expense->trans_date)== date('d/m/Y') ? 'bx-fade-right' : '' }} "></i>
+                                    <i class="bx bxs-right-arrow-circle font-size-18 {{ isset($expense->trans_date) == date('Y-m-d') ? 'bx-fade-right' : '' }} "></i>
                                 </div>
                             
                                 <div class="d-flex">
                                     <div class="col-md-2 me-3">
-                                        <h5 class="font-size-14">{{ date('d/m',strtotime($expense->trans_date)) }}<i class="bx bx-right-arrow-alt font-size-16 text-primary align-middle ms-2"></i></h5>
+                                        <h5 class="font-size-14">{{ date('m/d',strtotime($expense->trans_date)) }}<i class="bx bx-right-arrow-alt font-size-16 text-primary align-middle ms-2"></i></h5>
                                     </div>
                                     <div class="col-md-8 me-3">
                                         <div>
