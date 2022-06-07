@@ -85,6 +85,9 @@ Route::group(['middleware' => ['install']], function () {
 
 			//Account Controller
 			Route::resource('accounts','AccountController');
+
+			//Account Controller
+			Route::resource('deposit','DepositController');
 			
 			//Income Controller
 			Route::get('income/get_table_data','IncomeController@get_table_data');
