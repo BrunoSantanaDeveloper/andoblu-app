@@ -6,7 +6,7 @@
     <div class="col-md-12">
         <div class="card">
             <div class="card-header d-flex align-items-center">
-				<h4 class="header-title">{{ _lang('List Account') }}</h4>
+				<h4 class="header-title">Depositos</h4>
                 <a class="btn btn-primary btn-sm ml-auto ajax-modal" data-title="{{ _lang('Add Account') }}"
                     href="{{route('accounts.create')}}"><i class="ti-plus"></i> {{ _lang('Add New') }}</a>
             </div>
@@ -15,10 +15,10 @@
                 <table class="table table-bordered data-table">
                     <thead>
                         <tr>
-                            <th>{{ _lang('Account Title') }}</th>
-                            <th>{{ _lang('Opening Date') }}</th>
-                            <th>{{ _lang('Account Number') }}</th>
-                            <th class="text-right">{{ _lang('Opening Balance') }}</th>
+                            <th>Origem</th>
+                            <th>Valor</th>
+                            <th>Data</th>
+                            <th class="text-right">Status</th>
                             <th class="action-col">{{ _lang('Action') }}</th>
                         </tr>
                     </thead>
