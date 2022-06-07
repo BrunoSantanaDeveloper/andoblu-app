@@ -79,7 +79,7 @@
                             
                                 <div class="d-flex">
                                     <div class="col-md-2 me-3">
-                                        <h5 class="font-size-14">{{ date('m/d',strtotime($expense->trans_date)) }}<i class="bx bx-right-arrow-alt font-size-16 text-primary align-middle ms-2"></i></h5>
+                                        <h5 class="font-size-14">{{ date('d M',strtotime($expense->trans_date)) }}<i class="bx bx-right-arrow-alt font-size-16 text-primary align-middle ms-2"></i></h5>
                                     </div>
                                     <div class="col-md-8 me-3">
                                         <div>
