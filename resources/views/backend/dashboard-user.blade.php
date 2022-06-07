@@ -40,7 +40,7 @@
                                     <h5 class="font-size-18">R$ 10.302,00</h5>
                                     <p class="text-muted mb-0">Saldo em conta</p>
 <div class="mt-4">
-                                <a href="" class="btn btn-primary waves-effect waves-light btn-sm">Depositar<i class="mdi mdi-arrow-right ms-1"></i></a>
+                                <a href="deposit" class="btn btn-primary waves-effect waves-light btn-sm">Depositar<i class="mdi mdi-arrow-right ms-1"></i></a>
                             </div>
                                 </div>
                                 <div class="col-6 text-center">
