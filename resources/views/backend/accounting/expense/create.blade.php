@@ -20,7 +20,7 @@
                             </div>
                         </div>
 
-                        <div class="col-md-6">
+                        <div class="col-md-6" hidden>
                             <div class="form-group">
                                 <a href="{{ route('accounts.create') }}" data-reload="false"
                                     data-title="{{ _lang('Create Account') }}" class="ajax-modal-2 select2-add"><i
@@ -71,7 +71,7 @@
                             </div>
                         </div>
 
-                        <div class="col-md-6">
+                        <div class="col-md-6" hidden>
                             <div class="form-group">
                                 <a href="{{ route('payment_methods.create') }}" data-reload="false"
                                     data-title="{{ _lang('Add Payment Method') }}" class="ajax-modal-2 select2-add"><i
@@ -95,7 +95,7 @@
                         <div class="col-md-6">
                             <div class="form-group">
                                 <label class="control-label">{{ _lang('Attachment') }}</label>
-                                <input type="file" class="form-control trickycode-file" name="attachment">
+                                <input type="file" class="form-control" name="attachment">
                             </div>
                         </div>
 
