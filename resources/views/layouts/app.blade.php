@@ -361,7 +361,7 @@
     <script type="text/javascript">
 
     /* Input Mask formats */
-    $('.money').mask("#.##0,00", {reverse: true});
+    $('.money').mask("#.##0,00", {reverse: true, removeMaskOnSubmit: true});
 
     (function($) {
 
