@@ -52,8 +52,9 @@
                         <div class="col-md-6">
                             <div class="form-group">
                                 <label class="control-label">{{ _lang('Amount')." ".currency() }}</label>
-                                <input type="text" class="form-control float-field" name="amount"
-                                    value="{{ old('amount') }}" required>
+                                <input type="text" class="form-control money" name="amount"
+                                    value="{{ old('amount') }}" 
+                                    required>
                             </div>
                         </div>
 

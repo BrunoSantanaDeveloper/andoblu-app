@@ -345,6 +345,10 @@
     <script src="{{ asset('public/backend/assets/libs/datatables.net-buttons/js/buttons.print.min.js') }}"></script>
     <script src="{{ asset('public/backend/assets/libs/datatables.net-buttons/js/buttons.colVis.min.js') }}"></script>
 
+    <!-- JQUERY MASK -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.16/jquery.mask.min.js"></script>
+
+
     <!-- Responsive examples -->
     <script src="assets/libs/datatables.net-responsive/js/dataTables.responsive.min.js"></script>
     <script src="assets/libs/datatables.net-responsive-bs4/js/responsive.bootstrap4.min.js"></script>
@@ -355,6 +359,10 @@
     <script src="{{ asset('public/backend/assets/js/scripts.js?v=1.1') }}"></script>
 
     <script type="text/javascript">
+
+    /* Input Mask formats */
+    $('.money').mask("#.##0,00", {reverse: true});
+
     (function($) {
 
         "use strict";
