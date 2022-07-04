@@ -15,7 +15,7 @@
                         <div class="col-md-6">
                             <div class="form-group">
                                 <label class="control-label">{{ _lang('Date') }}</label>
-                                <input type="text" class="form-control datepicker" name="trans_date"
+                                <input type="date" class="form-control" name="trans_date"
                                     value="{{ old('trans_date') }}" required>
                             </div>
                         </div>
