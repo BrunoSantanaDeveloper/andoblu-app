@@ -90,7 +90,7 @@ class ExpenseController extends Controller {
             'trans_date'        => 'required',
             'account_id'        => 'required',
             'chart_id'          => 'required',
-            'amount'            => 'required|numeric',
+            //'amount'            => 'required|numeric',
             'payment_method_id' => 'required',
             'reference'         => 'nullable|max:50',
             'attachment'        => 'nullable|mimes:jpeg,png,jpg,doc,pdf,docx,zip',
