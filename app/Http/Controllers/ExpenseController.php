@@ -126,6 +126,8 @@ class ExpenseController extends Controller {
         $transaction->note              = $request->input('note');
         $transaction->attachment        = $attachment;
 
+        dd($transaction->amount);
+
         $transaction->save();
         //Set Related Data
         $transaction->trans_date        = date('d M, Y', strtotime($transaction->trans_date));
