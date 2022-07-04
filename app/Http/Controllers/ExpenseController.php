@@ -126,7 +126,7 @@ class ExpenseController extends Controller {
         $transaction->note              = $request->input('note');
         $transaction->attachment        = $attachment;
 
-        dd($transaction->amount);
+        dd(decimalPlace($transaction->amount));
 
         $transaction->save();
         //Set Related Data
