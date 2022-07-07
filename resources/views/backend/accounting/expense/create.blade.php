@@ -7,8 +7,7 @@
             <div class="card-header header-title">{{ _lang('Add Expense') }}</div>
 
             <div class="card-body">
-                <form method="post" class="validate" autocomplete="off" 
-                action="{{ route('expense.store') }}"
+                <form method="post" class="validate" autocomplete="off" action="{{ route('expense.store') }}"
                     enctype="multipart/form-data">
                     {{ csrf_field() }}
 
@@ -16,12 +15,12 @@
                         <div class="col-md-6">
                             <div class="form-group">
                                 <label class="control-label">{{ _lang('Date') }}</label>
-                                <input type="date" class="form-control" name="trans_date"
+                                <input type="text" class="form-control datepicker" name="trans_date"
                                     value="{{ old('trans_date') }}" required>
                             </div>
                         </div>
 
-                        <div class="col-md-6" hidden>
+                        <div class="col-md-6">
                             <div class="form-group">
                                 <a href="{{ route('accounts.create') }}" data-reload="false"
                                     data-title="{{ _lang('Create Account') }}" class="ajax-modal-2 select2-add"><i
@@ -30,7 +29,6 @@
                                 <select class="form-control select2-ajax" data-value="id" data-display="account_title"
                                     data-table="accounts" data-where="1" name="account_id" id="account_id" required>
                                     <option value="">{{ _lang('Select One') }}</option>
-                                    <option value="1" selected></option>
                                     {{ create_option("accounts","id","account_title",old('account_id'),array("company_id="=>company_id())) }}
                                 </select>
                             </div>
@@ -54,9 +52,8 @@
                         <div class="col-md-6">
                             <div class="form-group">
                                 <label class="control-label">{{ _lang('Amount')." ".currency() }}</label>
-                                <input type="text" class="form-control money" name="amount"
-                                    value="{{ old('amount') }}" 
-                                    required>
+                                <input type="text" class="form-control float-field" name="amount"
+                                    value="{{ old('amount') }}" required>
                             </div>
                         </div>
 
@@ -74,17 +71,15 @@
                             </div>
                         </div>
 
-                        <div class="col-md-6" hidden>
+                        <div class="col-md-6">
                             <div class="form-group">
                                 <a href="{{ route('payment_methods.create') }}" data-reload="false"
-                                    data-title="{{ _lang('Add Payment Method') }}" 
-                                    class="ajax-modal-2 select2-add"><i
-                                    class="ti-plus"></i> {{ _lang('Add New') }}</a>
+                                    data-title="{{ _lang('Add Payment Method') }}" class="ajax-modal-2 select2-add"><i
+                                        class="ti-plus"></i> {{ _lang('Add New') }}</a>
                                 <label class="control-label">{{ _lang('Payment Method') }}</label>
                                 <select class="form-control select2-ajax" data-value="id" data-display="name"
                                     data-table="payment_methods" data-where="1" name="payment_method_id" required>
                                     <option value="">{{ _lang('Select One') }}</option>
-                                    <option value="1" selected></option>
                                     {{ create_option("payment_methods","id","name",old('payment_method_id'),array("company_id="=>company_id())) }}
                                 </select>
                             </div>
@@ -100,7 +95,7 @@
                         <div class="col-md-6">
                             <div class="form-group">
                                 <label class="control-label">{{ _lang('Attachment') }}</label>
-                                <input type="file" class="form-control" name="attachment">
+                                <input type="file" class="form-control trickycode-file" name="attachment">
                             </div>
                         </div>
 
