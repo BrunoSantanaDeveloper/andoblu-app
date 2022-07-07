@@ -16,7 +16,7 @@
                         <div class="col-md-6">
                             <div class="form-group">
                                 <label class="control-label">{{ _lang('Date') }}</label>
-                                <input type="text" class="form-control datepicker" name="trans_date"
+                                <input type="date" class="form-control " name="trans_date"
                                     value="{{ $transaction->getRawOriginal('trans_date') }}" required>
                             </div>
                         </div>
@@ -55,7 +55,7 @@
                         <div class="col-md-6">
                             <div class="form-group">
                                 <label class="control-label">{{ _lang('Amount')." ".currency() }}</label>
-                                <input type="text" class="form-control float-field" name="amount"
+                                <input type="text" class="form-control money" name="amount"
                                     value="{{ $transaction->amount }}" required>
                             </div>
                         </div>
