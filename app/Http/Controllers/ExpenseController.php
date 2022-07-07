@@ -120,7 +120,7 @@ class ExpenseController extends Controller {
         $transaction->type              = 'expense';
         $transaction->dr_cr             = 'dr';
         //dd($request->input('amount'));
-        $transaction->amount            = number_format($request->input('amount'),2,".",",");
+        $transaction->amount            = str_replace (',', '.', str_replace ('.', '', $request->input('amount')));
         $transaction->payer_payee_id    = $request->input('payer_payee_id');
         $transaction->payment_method_id = $request->input('payment_method_id');
         $transaction->reference         = $request->input('reference');
