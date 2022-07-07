@@ -44,7 +44,7 @@
                             </div>
                         </div>
 
-                        <div class="col-md-6" hidden>
+                        <div class="col-md-6" >
                             <div class="form-group">
                                 <a href="{{ route('chart_of_accounts.create') }}" data-reload="false"
                                     data-title="{{ _lang('Add Income/Expense Type') }}"
