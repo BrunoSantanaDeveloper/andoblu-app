@@ -117,7 +117,7 @@
                         <div class="col-md-6 clear">
                         <div class="form-check form-switch form-switch-lg mb-3" dir="ltr">
                                                 <input class="form-check-input" type="checkbox" id="SwitchCheckSizelg" checked="">
-                                                <label class="form-check-label" for="SwitchCheckSizelg">Large Size Switch</label>
+                                                <label class="form-check-label" for="SwitchCheckSizelg">Autorizar Pagamento</label>
                                             </div>
                         </div>
 
