@@ -110,6 +110,7 @@
                             <div class="form-group">
                                 <label class="control-label">{{ _lang('Note') }}</label>
                                 <textarea class="form-control" name="note">{{ $transaction->note }}</textarea>
+                                <div><a href="{{ url('public/uploads/transactions/$transaction->note') }}" > {{ $transaction->note }} </a></div>
                             </div>
                         </div>
 
