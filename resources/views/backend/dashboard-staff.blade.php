@@ -7,8 +7,44 @@
 @php $permissions = permission_list(); @endphp
 
 <div class="row">
+@if (in_array('dashboard.financial_account_balance',$permissions))
+    <div class="col-xl-6">
+        <div class="card mb-4">
+            <div class="card-header">
+                <h4 class="header-title">{{ _lang('Financial Account Balance') }}</h4>
+            </div>
+            <div class="card-body">
+                <table class="table table-bordered">
+                    <thead>
+                        <tr>
+                            <th>{{ _lang('A/C') }}</th>
+                            <th class="text-right">{{ _lang('Balance') }}</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {{ $balanceTotal = 0 }}
+                        @foreach(get_financial_balance() as $account)
+                        <tr id="row_{{ $account->id }}">
+                            <td class='account_title'>{{ $account->account_title }}</td>
+                            <td class='account_number'>{{ $account->account_number }}</td>
+                            <td class='opening_balance text-right'>{{ decimalPlace($account->balance, $currency) }}
+                            </td>
+                        </tr>
+                        {{ $balanceTotal = $account->balance + $balanceTotal }}
+                        @endforeach
+                        <tr id="row_{{ $account->id }}">
+                            <td >{{ Saldo Total }}</td>
+                            <td class='text-right '>{{ $balanceTotal }}
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+    @endif
     @if (in_array('dashboard.current_day_income',$permissions))
-    <div class="col-xl-3 col-md-6">
+    <div class="col-xl-3 col-md-6" hidden>
         <div class="card mb-4">
             <div class="card-body">
                 <h5>{{ _lang('Current Day Income') }}</h5>
@@ -30,7 +66,7 @@
     @endif
 
     @if (in_array('dashboard.current_month_income',$permissions))
-    <div class="col-xl-3 col-md-6">
+    <div class="col-xl-3 col-md-6" hidden>
         <div class="card mb-4">
             <div class="card-body">
                 <h5>{{ _lang('Monthly Income') }}</h5>
@@ -53,7 +89,7 @@
 </div>
 
 @if (in_array('dashboard.yearly_income_vs_expense',$permissions))
-<div class="row">
+<div class="row" hidden>
     <div class="col-xl-12">
         <div class="card mb-4">
             <div class="card-header">
@@ -69,7 +105,7 @@
 
 <div class="row">
     @if (in_array('dashboard.latest_income',$permissions))
-    <div class="col-xl-6">
+    <div class="col-xl-6" hidden>
         <div class="card mb-4">
             <div class="card-header">
                 <h4 class="header-title">{{ _lang('Last 5 Income') }}</h4>
@@ -156,7 +192,7 @@
 
 <div class="row">
     @if (in_array('dashboard.monthly_income_vs_expense',$permissions))
-    <div class="col-xl-6">
+    <div class="col-xl-6" hidden>
         <div class="card mb-4">
             <div class="card-header">
                 <h4 class="header-title">{{ _lang('Income vs Expense of')." ".date('M, Y') }}</h4>
@@ -168,36 +204,7 @@
     </div>
     @endif
 
-    @if (in_array('dashboard.financial_account_balance',$permissions))
-    <div class="col-xl-6">
-        <div class="card mb-4">
-            <div class="card-header">
-                <h4 class="header-title">{{ _lang('Financial Account Balance') }}</h4>
-            </div>
-            <div class="card-body">
-                <table class="table table-bordered">
-                    <thead>
-                        <tr>
-                            <th>{{ _lang('A/C') }}</th>
-                            <th>{{ _lang('A/C Number') }}</th>
-                            <th class="text-right">{{ _lang('Balance') }}</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        @foreach(get_financial_balance() as $account)
-                        <tr id="row_{{ $account->id }}">
-                            <td class='account_title'>{{ $account->account_title }}</td>
-                            <td class='account_number'>{{ $account->account_number }}</td>
-                            <td class='opening_balance text-right'>{{ decimalPlace($account->balance, $currency) }}
-                            </td>
-                        </tr>
-                        @endforeach
-                    </tbody>
-                </table>
-            </div>
-        </div>
-    </div>
-    @endif
+    
 </div>
 
 @endsection
