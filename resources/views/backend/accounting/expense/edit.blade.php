@@ -36,13 +36,7 @@
                             </div>
                         </div>
 
-                        <div class="col-md-6">
-                            <div class="form-group">
-                                <label class="control-label">{{ _lang('Amount')." ".currency() }}</label>
-                                <input type="text" class="form-control float-field" name="amount"
-                                    value="{{ $transaction->amount }}" required>
-                            </div>
-                        </div>
+                        
 
                         <div class="col-md-6" >
                             <div class="form-group">
@@ -55,6 +49,14 @@
                                     <option value="">{{ _lang('Select One') }}</option>
                                     {{ create_option("chart_of_accounts","id","name",$transaction->chart_id,array("type="=>"expense","AND company_id="=>company_id())) }}
                                 </select>
+                            </div>
+                        </div>
+
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label class="control-label">{{ _lang('Amount')." ".currency() }}</label>
+                                <input type="text" class="form-control float-field" name="amount"
+                                    value="{{ $transaction->amount }}" required>
                             </div>
                         </div>
 
