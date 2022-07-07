@@ -103,6 +103,7 @@
                                 <label class="control-label">{{ _lang('Attachment') }}</label>
                                 <input type="file" class="form-control "
                                     data-value="{{ $transaction->attachment}}" name="attachment">
+                                    <div><a href="{{ url('public/uploads/transactions/'.$transaction->attachment) }}" > {{ $transaction->attachment}} </a></div>
                             </div>
                         </div>
 
@@ -110,7 +111,7 @@
                             <div class="form-group">
                                 <label class="control-label">{{ _lang('Note') }}</label>
                                 <textarea class="form-control" name="note">{{ $transaction->note }}</textarea>
-                                <div><a href="{{ url('public/uploads/transactions/$transaction->note') }}" > {{ $transaction->note }} </a></div>
+                               
                             </div>
                         </div>
 
