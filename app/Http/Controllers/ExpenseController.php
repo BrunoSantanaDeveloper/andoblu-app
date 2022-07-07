@@ -119,7 +119,7 @@ class ExpenseController extends Controller {
         $transaction->chart_id          = $request->input('chart_id');
         $transaction->type              = 'expense';
         $transaction->dr_cr             = 'dr';
-        dd($request->input('amount'));
+        //dd($request->input('amount'));
         $transaction->amount            = number_format($request->input('amount'),2,".",",");
         $transaction->payer_payee_id    = $request->input('payer_payee_id');
         $transaction->payment_method_id = $request->input('payment_method_id');
