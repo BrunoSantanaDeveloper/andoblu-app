@@ -15,10 +15,9 @@
                 <table class="table table-bordered data-table">
                     <thead>
                         <tr>
-                            <th>Origem</th>
-                            <th>Valor</th>
                             <th>Data</th>
                             <th class="text-right">Status</th>
+                            <th>Valor</th>
                             <th class="action-col">{{ _lang('Action') }}</th>
                         </tr>
                     </thead>
@@ -27,7 +26,7 @@
 						@php $date_format = get_date_format(); @endphp
                         @foreach($accounts as $account)
                         <tr id="row_{{ $account->id }}">
-                            <td class='account_title'>{{ $account->account_title }}</td>
+                            
                             <td class='opening_date'>{{ date("$date_format", strtotime($account->opening_date)) }}</td>
                             <td class='account_number'>{{ $account->account_number }}</td>
                             <td class='opening_balance text-right'>
