@@ -103,7 +103,7 @@
                                 <label class="control-label">{{ _lang('Attachment') }}</label>
                                 <input type="file" class="form-control "
                                     data-value="{{ $transaction->attachment}}" name="attachment">
-                                    <div><a href="{{ url('public/uploads/transactions/'.$transaction->attachment) }}" > {{ $transaction->attachment}} </a></div>
+                                    <div><a target="_BLANK" href="{{ url('public/uploads/transactions/'.$transaction->attachment) }}" > {{ $transaction->attachment}} </a></div>
                             </div>
                         </div>
 
@@ -111,6 +111,13 @@
                             <div class="form-group">
                                 <label class="control-label">{{ _lang('Note') }}</label>
                                 <textarea class="form-control" name="note">{{ $transaction->note }}</textarea>
+                               
+                            </div>
+                        </div>
+                        <div class="col-md-6 clear">
+                            <div class="form-group">
+                            <input class="form-check-input" type="checkbox" id="SwitchCheckSizelg" checked="">
+                            <label class="form-check-label" for="SwitchCheckSizelg">Autorizar Pagamento</label>
                                
                             </div>
                         </div>
