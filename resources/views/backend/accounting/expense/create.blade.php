@@ -7,7 +7,8 @@
             <div class="card-header header-title">{{ _lang('Add Expense') }}</div>
 
             <div class="card-body">
-                <form method="post" class="validate" autocomplete="off" action="{{ route('expense.store') }}"
+                <form method="post" class="validate" autocomplete="off" 
+                action="{{ route('expense.store') }}"
                     enctype="multipart/form-data">
                     {{ csrf_field() }}
 
@@ -76,8 +77,9 @@
                         <div class="col-md-6" hidden>
                             <div class="form-group">
                                 <a href="{{ route('payment_methods.create') }}" data-reload="false"
-                                    data-title="{{ _lang('Add Payment Method') }}" class="ajax-modal-2 select2-add"><i
-                                        class="ti-plus"></i> {{ _lang('Add New') }}</a>
+                                    data-title="{{ _lang('Add Payment Method') }}" 
+                                    class="ajax-modal-2 select2-add"><i
+                                    class="ti-plus"></i> {{ _lang('Add New') }}</a>
                                 <label class="control-label">{{ _lang('Payment Method') }}</label>
                                 <select class="form-control select2-ajax" data-value="id" data-display="name"
                                     data-table="payment_methods" data-where="1" name="payment_method_id" required>
