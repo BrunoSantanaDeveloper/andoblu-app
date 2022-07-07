@@ -6,7 +6,7 @@
 @php $currency = currency(); @endphp
 
 <div class="row">
-    <div class="col-xl-3 col-md-6">
+    <div class="col-xl-3 col-md-6" hidden>
         <div class="card mb-4">
             <div class="card-body">
                 <h5>{{ _lang('Current Day Income') }}</h5>
@@ -24,7 +24,7 @@
         </div>
     </div>
 
-    <div class="col-xl-3 col-md-6">
+    <div class="col-xl-3 col-md-6" hidden>
         <div class="card mb-4">
             <div class="card-body">
                 <h5>{{ _lang('Monthly Income') }}</h5>
