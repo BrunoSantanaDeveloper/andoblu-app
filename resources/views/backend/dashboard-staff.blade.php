@@ -147,7 +147,7 @@
     @endif
 
     @if (in_array('dashboard.latest_expense',$permissions))
-    <div class="col-xl-6">
+    <div class="col-xl-12">
         <div class="card mb-4">
             <div class="card-header">
                 <h4 class="header-title">{{ _lang('Last 5 Expense') }}</h4>
