@@ -161,7 +161,6 @@
                     <thead>
                         <tr>
                             <th>{{ _lang('A/C') }}</th>
-                            <th>{{ _lang('A/C Number') }}</th>
                             <th class="text-right">{{ _lang('Balance') }}</th>
                         </tr>
                     </thead>
@@ -169,7 +168,6 @@
                         @foreach(get_financial_balance() as $account)
                         <tr id="row_{{ $account->id }}">
                             <td class='account_title'>{{ $account->account_title }}</td>
-                            <td class='account_number'>{{ $account->account_number }}</td>
                             <td class='opening_balance text-right'>{{ decimalPlace($account->balance, $currency) }}
                             </td>
                         </tr>
