@@ -98,8 +98,8 @@
 
         <div class="col-md-12">
             <div class="form-check">
-                <input class="form-check-input" type="checkbox" value="" name="authorized payment" id="authorized_payment">
-                <label class="form-check-label" for="defaultCheck1">
+                <input class="form-check-input" type="checkbox" value="1" name="authorized payment" id="authorized_payment">
+                <label class="form-check-label" for="authorized_payment">
                   Autorizar Pagamento
                 </label>
               </div>

@@ -96,6 +96,32 @@ class ExpenseController extends Controller {
             'attachment'        => 'nullable|mimes:jpeg,png,jpg,doc,pdf,docx,zip',
         ]);
 
+        $transaction                    = new Transaction();
+        
+
+        if (isset($request->input('authorized_payment')) == 1) {
+
+            $deposit = Transaction::sum('amount')
+            ->where("account_id", $request->input('account_id'))
+            ->where("type", "income");
+
+            $expense = Transaction::sum('amount')
+            ->where("account_id", $request->input('account_id'))
+            ->where("type", "expense");
+
+            if(($request->input('amount') - ($deposit - $expense)) <= 0){
+                if ($request->ajax()) {
+                    return response()->json(['result' => 'error', 'message' => 'Saldo Insuficiente']);
+                } else {
+                    return redirect()->route('expense.create')
+                        ->withErrors('Saldo Insuficiente')
+                        ->withInput();
+                }
+            }
+
+            
+        }
+
         if ($validator->fails()) {
             if ($request->ajax()) {
                 return response()->json(['result' => 'error', 'message' => $validator->errors()->all()]);
@@ -113,7 +139,7 @@ class ExpenseController extends Controller {
             $file->move(public_path() . "/uploads/transactions/", $attachment);
         }
 
-        $transaction                    = new Transaction();
+        
         $transaction->trans_date        = $request->input('trans_date');
         $transaction->account_id        = $request->input('account_id');
         $transaction->chart_id          = $request->input('chart_id');
