@@ -98,7 +98,7 @@ class ExpenseController extends Controller {
 
         $transaction                    = new Transaction();
         
-
+/* 
         dd($request->input('authorized_payment'));
         if($request->input('authorized_payment') == 1) {
 
@@ -121,7 +121,7 @@ class ExpenseController extends Controller {
             }
 
             
-        }
+        } */
 
         if ($validator->fails()) {
             if ($request->ajax()) {
