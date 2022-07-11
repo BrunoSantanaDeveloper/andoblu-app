@@ -73,7 +73,7 @@
     <div class="sb-nav-link-icon"><i class="ti-shopping-cart-full"></i></div>
     {{ _lang('Sales') }}
     <div class="sb-sidenav-collapse-arrow"><i class="ti-angle-down"></i></div>
-</a> --}}
+</a> 
 <div class="collapse" id="sales" aria-labelledby="headingOne" data-parent="#sidenavAccordion">
     <nav class="sb-sidenav-menu-nested nav">
         <a class="nav-link" href="{{ route('invoices.create') }}">{{ _lang('Create Invoice') }}</a>
@@ -95,7 +95,7 @@
         <a class="nav-link" href="{{ route('accounts.create') }}">{{ _lang('Add New Account') }}</a>
     </nav>
 </div>
-
+--}}
 <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#transactions" aria-expanded="false"
     aria-controls="collapseLayouts">
     <div class="sb-nav-link-icon"><i class="ti-receipt"></i></div>
