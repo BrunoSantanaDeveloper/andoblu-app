@@ -149,7 +149,7 @@
 
 <div class="sb-sidenav-menu-heading">{{ _lang('Company Settings') }}</div>
 
-<a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#staffs" aria-expanded="false"
+{{-- <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#staffs" aria-expanded="false"
     aria-controls="collapseLayouts">
     <div class="sb-nav-link-icon"><i class="ti-user"></i></div>
     {{ _lang('Staff Management') }}
@@ -163,7 +163,7 @@
         <a class="nav-link" href="{{ route('permission.index') }}">{{ _lang('Access Control') }}</a>
     </nav>
 </div>
-
+ --}}
 <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#company_settings" aria-expanded="false"
     aria-controls="collapseLayouts">
     <div class="sb-nav-link-icon"><i class="ti-settings"></i></div>
@@ -173,8 +173,8 @@
 <div class="collapse" id="company_settings" aria-labelledby="headingOne" data-parent="#sidenavAccordion">
     <nav class="sb-sidenav-menu-nested nav">
         <a class="nav-link" href="{{ route('company.change_settings') }}">{{ _lang('Company Settings') }}</a>
-        <a class="nav-link" href="{{ route('company_email_template.index') }}">{{ _lang('Email Template') }}</a>
-        <a class="nav-link" href="{{ route('product_units.index') }}">{{ _lang('Product Unit') }}</a>
+        {{-- <a class="nav-link" href="{{ route('company_email_template.index') }}">{{ _lang('Email Template') }}</a>
+        <a class="nav-link" href="{{ route('product_units.index') }}">{{ _lang('Product Unit') }}</a> --}}
     </nav>
 </div>
 
@@ -187,8 +187,8 @@
 <div class="collapse" id="transaction_settings" aria-labelledby="headingOne" data-parent="#sidenavAccordion">
     <nav class="sb-sidenav-menu-nested nav">
         <a class="nav-link" href="{{ route('chart_of_accounts.index') }}">{{ _lang('Income & Expense Types') }}</a>
-        <a class="nav-link" href="{{ route('payment_methods.index') }}">{{ _lang('Payment Methods') }}</a>
-        <a class="nav-link" href="{{ route('taxs.index') }}">{{ _lang('Tax Settings') }}</a>
+        {{-- <a class="nav-link" href="{{ route('payment_methods.index') }}">{{ _lang('Payment Methods') }}</a>
+        <a class="nav-link" href="{{ route('taxs.index') }}">{{ _lang('Tax Settings') }}</a> --}}
     </nav>
 </div>
 
