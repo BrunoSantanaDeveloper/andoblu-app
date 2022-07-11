@@ -139,8 +139,8 @@
 	  <a class="nav-link" href="{{ route('reports.income_report') }}">{{ _lang('Income Report') }}</a>
 	  <a class="nav-link" href="{{ route('reports.expense_report') }}">{{ _lang('Expense Report') }}</a>
 	  <a class="nav-link" href="{{ route('reports.transfer_report') }}">{{ _lang('Transfer Report') }}</a>
-	  <a class="nav-link" href="{{ route('reports.income_vs_expense') }}">{{ _lang('Income VS Expense') }}</a>
-	  <a class="nav-link" href="{{ route('reports.report_by_payer') }}">{{ _lang('Report by Payer') }}</a>
+	  {{-- <a class="nav-link" href="{{ route('reports.income_vs_expense') }}">{{ _lang('Income VS Expense') }}</a> --}}
+	  {{-- <a class="nav-link" href="{{ route('reports.report_by_payer') }}">{{ _lang('Report by Payer') }}</a> --}}
 	  <a class="nav-link" href="{{ route('reports.report_by_payee') }}">{{ _lang('Report by Payee') }}</a>
     </nav>
 </div>
