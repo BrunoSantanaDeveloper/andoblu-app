@@ -15,22 +15,22 @@
 					data: "account.account_title",
 					name: "account.account_title"
 				},
-				{
+				/* {
 					data: "income_type.name",
 					name: "income_type.name"
-				},
+				}, */
 				{
 					data: "amount",
 					name: "amount"
 				},
-				{
+				/* {
 					data: "payer.contact_name",
 					name: "payer.contact_name"
 				},
 				{
 					data: "payment_method.name",
 					name: "payment_method.name"
-				},
+				}, */
 				{
 					data: "action",
 					name: "action"

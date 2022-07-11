@@ -17,10 +17,10 @@
                         <tr>
                             <th>{{ _lang('Date') }}</th>
                             <th>{{ _lang('Account') }}</th>
-                            <th>{{ _lang('Income Type') }}</th>
+                            {{-- <th>{{ _lang('Income Type') }}</th> --}}
                             <th class="text-right">{{ _lang('Amount') }}</th>
-                            <th>{{ _lang('Payer') }}</th>
-                            <th>{{ _lang('Payment Method') }}</th>
+                            {{-- <th>{{ _lang('Payer') }}</th> --}}
+                            {{-- <th>{{ _lang('Payment Method') }}</th> --}}
                             <th class="action-col">{{ _lang('Action') }}</th>
                         </tr>
                     </thead>
