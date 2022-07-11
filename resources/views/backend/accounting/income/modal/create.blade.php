@@ -7,7 +7,7 @@
             <div class="form-group">
                 <label class="control-label">{{ _lang('Date') }}</label>
                 <input type="text" class="form-control datepicker" name="trans_date" value="{{ old('trans_date') }}"
-                    required disabled>
+                    required readonly>
             </div>
         </div>
 
