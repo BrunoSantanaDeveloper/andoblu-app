@@ -96,14 +96,14 @@
             </div>
         </div>
 
-        <div class="col-md-12">
+       {{--  <div class="col-md-12">
             <div class="form-check">
                 <input class="form-check-input" type="checkbox" value="1" name="authorized payment" id="authorized_payment">
                 <label class="form-check-label" for="authorized_payment">
                   Autorizar Pagamento
                 </label>
               </div>
-        </div>
+        </div> --}}
 
         <div class="form-group">
             <div class="col-md-12">
