@@ -103,7 +103,7 @@ class ExpenseController extends Controller {
 
 
             $deposit = Transaction::where("account_id", $request->input('account_id'))
-            ->where("type", "income")->sum('amount_total');
+            ->where("type", "income")->sum('amount');
 
 
             dd($deposit);
