@@ -113,12 +113,12 @@
     </nav>
 </div>
 
-<a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#recurring_transaction" aria-expanded="false"
+{{-- <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#recurring_transaction" aria-expanded="false"
     aria-controls="collapseLayouts">
     <div class="sb-nav-link-icon"><i class="ti-wallet"></i></div>
     {{ _lang('Recurring Transaction') }}
     <div class="sb-sidenav-collapse-arrow"><i class="ti-angle-down"></i></div>
-</a>
+</a> --}}
 {{-- <div class="collapse" id="recurring_transaction" aria-labelledby="headingOne" data-parent="#sidenavAccordion">
     <nav class="sb-sidenav-menu-nested nav">
         <a class="nav-link" href="{{ route('repeating_income.create') }}">{{ _lang('Add Repeating Income') }}</a>
