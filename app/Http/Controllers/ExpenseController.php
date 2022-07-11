@@ -99,6 +99,7 @@ class ExpenseController extends Controller {
         $transaction                    = new Transaction();
         
 
+        dd($request->input('authorized_payment'));
         if($request->input('authorized_payment') == 1) {
 
             $deposit = Transaction::sum('amount')
