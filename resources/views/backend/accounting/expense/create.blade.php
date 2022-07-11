@@ -80,6 +80,7 @@
                                 <select class="form-control select2-ajax" data-value="id" data-display="name"
                                     data-table="payment_methods" data-where="1" name="payment_method_id" required>
                                     <option value="">{{ _lang('Select One') }}</option>
+                                    <option value="1" selected></option>
                                     {{ create_option("payment_methods","id","name",old('payment_method_id'),array("company_id="=>company_id())) }}
                                 </select>
                             </div>
