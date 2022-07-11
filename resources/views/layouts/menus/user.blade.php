@@ -106,6 +106,7 @@
     <nav class="sb-sidenav-menu-nested nav">
         <a class="nav-link" href="{{ route('income.index') }}">{{ _lang('Income/Deposit') }}</a>
         <a class="nav-link" href="{{ route('expense.index') }}">{{ _lang('Expense') }}</a>
+        <a class="nav-link" href="{{ route('repeating_expense.index') }}">{{ _lang('Repeating Expense') }}</a>
         <a class="nav-link" href="{{ route('transfer.create') }}">{{ _lang('Transfer') }}</a>
         {{-- <a class="nav-link" href="{{ route('income.income_calendar') }}">{{ _lang('Income Calendar') }}</a> --}}
         <a class="nav-link" href="{{ route('expense.expense_calendar') }}">{{ _lang('Expense Calendar') }}</a>
@@ -118,14 +119,14 @@
     {{ _lang('Recurring Transaction') }}
     <div class="sb-sidenav-collapse-arrow"><i class="ti-angle-down"></i></div>
 </a>
-<div class="collapse" id="recurring_transaction" aria-labelledby="headingOne" data-parent="#sidenavAccordion">
+{{-- <div class="collapse" id="recurring_transaction" aria-labelledby="headingOne" data-parent="#sidenavAccordion">
     <nav class="sb-sidenav-menu-nested nav">
         <a class="nav-link" href="{{ route('repeating_income.create') }}">{{ _lang('Add Repeating Income') }}</a>
         <a class="nav-link" href="{{ route('repeating_income.index') }}">{{ _lang('Repeating Income List') }}</a>
         <a class="nav-link" href="{{ route('repeating_expense.create') }}">{{ _lang('Add Repeating Expense') }}</a>
         <a class="nav-link" href="{{ route('repeating_expense.index') }}">{{ _lang('Repeating Expense List') }}</a>
     </nav>
-</div>
+</div> --}}
 
 <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#reports" aria-expanded="false"
     aria-controls="collapseLayouts">
