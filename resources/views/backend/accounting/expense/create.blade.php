@@ -81,7 +81,8 @@
                                     data-table="payment_methods" data-where="1" name="payment_method_id" required>
                                     <option value="">{{ _lang('Select One') }}</option>
                                     {{-- {{ create_option("payment_methods","id","name",old('payment_method_id'),array("company_id="=>company_id())) }} --}}
-                                    {{ create_option("payment_methods","id","name",1,array("company_id="=>company_id())) }}
+                                    {{ create_option("payment_methods","id","name",1) }}
+                                    
                                 </select>
                             </div>
                         </div>
