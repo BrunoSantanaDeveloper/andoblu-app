@@ -91,37 +91,10 @@ class ExpenseController extends Controller {
             'account_id'        => 'required',
             'chart_id'          => 'required',
             'amount'            => 'required|numeric',
-            /* 'payment_method_id' => 'required', */
+            'payment_method_id' => 'required',
             'reference'         => 'nullable|max:50',
             'attachment'        => 'nullable|mimes:jpeg,png,jpg,doc,pdf,docx,zip',
         ]);
-
-        $transaction                    = new Transaction();
-        
-/* 
-        dd($request->input('authorized_payment'));
-        if($request->input('authorized_payment') == 1) {
-
-            $deposit = Transaction::sum('amount')
-            ->where("account_id", $request->input('account_id'))
-            ->where("type", "income");
-
-            $expense = Transaction::sum('amount')
-            ->where("account_id", $request->input('account_id'))
-            ->where("type", "expense");
-
-            if(($request->input('amount') - ($deposit - $expense)) <= 0){
-                if ($request->ajax()) {
-                    return response()->json(['result' => 'error', 'message' => 'Saldo Insuficiente']);
-                } else {
-                    return redirect()->route('expense.create')
-                        ->withErrors('Saldo Insuficiente')
-                        ->withInput();
-                }
-            }
-
-            
-        } */
 
         if ($validator->fails()) {
             if ($request->ajax()) {
@@ -140,7 +113,7 @@ class ExpenseController extends Controller {
             $file->move(public_path() . "/uploads/transactions/", $attachment);
         }
 
-        
+        $transaction                    = new Transaction();
         $transaction->trans_date        = $request->input('trans_date');
         $transaction->account_id        = $request->input('account_id');
         $transaction->chart_id          = $request->input('chart_id');
@@ -148,7 +121,7 @@ class ExpenseController extends Controller {
         $transaction->dr_cr             = 'dr';
         $transaction->amount            = $request->input('amount');
         $transaction->payer_payee_id    = $request->input('payer_payee_id');
-        $transaction->payment_method_id = 1;/* $request->input('payment_method_id'); */
+        $transaction->payment_method_id = $request->input('payment_method_id');
         $transaction->reference         = $request->input('reference');
         $transaction->note              = $request->input('note');
         $transaction->attachment        = $attachment;
