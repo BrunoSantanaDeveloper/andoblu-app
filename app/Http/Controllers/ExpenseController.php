@@ -108,7 +108,8 @@ class ExpenseController extends Controller {
             $expense = Transaction::where("account_id", $request->input('account_id'))
             ->where("type", "expense")->sum('amount');
 
-            if(($request->input('amount') - ($deposit - $expense)) <= 0){
+            return response()->json(['result' => 'error', 'message' => ($request->input('amount') - ($deposit - $expense))]);
+            /* if(($request->input('amount') - ($deposit - $expense)) <= 0){
                 if ($request->ajax()) {
                     return response()->json(['result' => 'error', 'message' => 'Saldo Insuficiente']);
                 } else {
@@ -116,7 +117,7 @@ class ExpenseController extends Controller {
                         ->withErrors('Saldo Insuficiente')
                         ->withInput();
                 }
-            }
+            } */
 
             
         }
