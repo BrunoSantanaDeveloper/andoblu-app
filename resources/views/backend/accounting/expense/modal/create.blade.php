@@ -80,14 +80,7 @@
             </div>
         </div>
 
-        <div class="col-md-6">
-            <div class="form-check">
-                <input class="form-check-input" type="checkbox" value="" name="authorized payment" id="authorized_payment">
-                <label class="form-check-label" for="defaultCheck1">
-                  Autorizar Pagamento
-                </label>
-              </div>
-        </div>
+        
 
         <div class="col-md-12">
             <div class="form-group">
@@ -101,6 +94,15 @@
                 <label class="control-label">{{ _lang('Note') }}</label>
                 <textarea class="form-control" name="note">{{ old('note') }}</textarea>
             </div>
+        </div>
+
+        <div class="col-md-12">
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="" name="authorized payment" id="authorized_payment">
+                <label class="form-check-label" for="defaultCheck1">
+                  Autorizar Pagamento
+                </label>
+              </div>
         </div>
 
         <div class="form-group">
