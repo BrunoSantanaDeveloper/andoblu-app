@@ -135,7 +135,7 @@
 </a>
 <div class="collapse" id="reports" aria-labelledby="headingOne" data-parent="#sidenavAccordion">
     <nav class="sb-sidenav-menu-nested nav">
-      <a class="nav-link" href="{{ route('reports.account_statement') }}">{{ _lang('Account Statement') }}</a>
+     {{--  <a class="nav-link" href="{{ route('reports.account_statement') }}">{{ _lang('Account Statement') }}</a> --}}
 	  <a class="nav-link" href="{{ route('reports.income_report') }}">{{ _lang('Income Report') }}</a>
 	  <a class="nav-link" href="{{ route('reports.expense_report') }}">{{ _lang('Expense Report') }}</a>
 	  <a class="nav-link" href="{{ route('reports.transfer_report') }}">{{ _lang('Transfer Report') }}</a>
