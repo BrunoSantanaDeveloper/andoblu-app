@@ -89,9 +89,9 @@ class IncomeController extends Controller {
         $validator = Validator::make($request->all(), [
             'trans_date'        => 'required',
             'account_id'        => 'required',
-            'chart_id'          => 'required',
+            /* 'chart_id'          => 'required', */
             'amount'            => 'required|numeric',
-            'payment_method_id' => 'required',
+            /* 'payment_method_id' => 'required', */
             'reference'         => 'nullable|max:50',
             'attachment'        => 'nullable|mimes:jpeg,png,jpg,doc,pdf,docx,zip',
         ]);
@@ -116,12 +116,12 @@ class IncomeController extends Controller {
         $transaction                    = new Transaction();
         $transaction->trans_date        = $request->input('trans_date');
         $transaction->account_id        = $request->input('account_id');
-        $transaction->chart_id          = $request->input('chart_id');
+        $transaction->chart_id          = 5;/* $request->input('chart_id'); */
         $transaction->type              = 'income';
         $transaction->dr_cr             = 'cr';
         $transaction->amount            = $request->input('amount');
         $transaction->payer_payee_id    = $request->input('payer_payee_id');
-        $transaction->payment_method_id = $request->input('payment_method_id');
+        $transaction->payment_method_id = 1;/* $request->input('payment_method_id'); */
         $transaction->reference         = $request->input('reference');
         $transaction->note              = $request->input('note');
         $transaction->attachment        = $attachment;

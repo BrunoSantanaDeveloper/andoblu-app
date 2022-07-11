@@ -7,7 +7,7 @@
             <div class="form-group">
                 <label class="control-label">{{ _lang('Date') }}</label>
                 <input type="text" class="form-control datepicker" name="trans_date" value="{{ old('trans_date') }}"
-                    required>
+                    required disabled>
             </div>
         </div>
 
@@ -24,7 +24,7 @@
             </div>
         </div>
 
-        <div class="col-md-6">
+        <div class="col-md-6" hidden>
             <div class="form-group">
                 <a href="{{ route('chart_of_accounts.create') }}" data-reload="false"
                     data-title="{{ _lang('Add Income/Expense Type') }}" class="ajax-modal-2 select2-add"><i
@@ -45,7 +45,7 @@
             </div>
         </div>
 
-        <div class="col-md-6">
+        <div class="col-md-6" hidden>
             <div class="form-group">
                 <a href="{{ route('contacts.create') }}" data-reload="false" data-title="{{ _lang('Add Client') }}"
                     class="ajax-modal-2 select2-add"><i class="ti-plus"></i> {{ _lang('Add New') }}</a>
@@ -59,7 +59,7 @@
         </div>
 
 
-        <div class="col-md-6">
+        <div class="col-md-6" hidden>
             <div class="form-group">
                 <a href="{{ route('payment_methods.create') }}" data-reload="false"
                     data-title="{{ _lang('Add Payment Method') }}" class="ajax-modal-2 select2-add"><i
@@ -82,7 +82,7 @@
 
         <div class="col-md-12">
             <div class="form-group">
-                <label class="control-label">{{ _lang('Attachment') }}</label>
+                <label class="control-label">Comprovante de Pagamento</label>
                 <input type="file" class="form-control dropify" name="attachment">
             </div>
         </div>
