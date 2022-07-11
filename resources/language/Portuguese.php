@@ -568,6 +568,7 @@ $language["Income/Deposit"]="Depósitos";
 $language["Recurring Transaction"]="Transações Recorrentes";
 $language["Repeating Income List"]="Listar Receita Recorrente";
 $language["Repeating Expense List"]="Listar Despesa Recorrente";
+$language["Repeating Expense"]="Despesa Recorrente";
 $language["Reports"]="Relatórios";
 $language["Account Statement"]="Account Statement";
 $language["Income Report"]="Relatório de Depósitos";
