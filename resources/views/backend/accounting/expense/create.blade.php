@@ -71,7 +71,7 @@
                             </div>
                         </div>
 
-                        <div class="col-md-6">
+                        <div class="col-md-6" hidden>
                             <div class="form-group">
                                 <a href="{{ route('payment_methods.create') }}" data-reload="false"
                                     data-title="{{ _lang('Add Payment Method') }}" class="ajax-modal-2 select2-add"><i
@@ -80,9 +80,7 @@
                                 <select class="form-control select2-ajax" data-value="id" data-display="name"
                                     data-table="payment_methods" data-where="1" name="payment_method_id" required>
                                     <option value="">{{ _lang('Select One') }}</option>
-                                    {{-- {{ create_option("payment_methods","id","name",old('payment_method_id'),array("company_id="=>company_id())) }} --}}
-                                    {{ create_option("payment_methods","id","name",1) }}
-                                    
+                                    {{ create_option("payment_methods","id","name",old('payment_method_id'),array("company_id="=>company_id())) }}
                                 </select>
                             </div>
                         </div>

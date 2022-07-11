@@ -91,7 +91,7 @@ class ExpenseController extends Controller {
             'account_id'        => 'required',
             'chart_id'          => 'required',
             'amount'            => 'required|numeric',
-            'payment_method_id' => 'required',
+            /* 'payment_method_id' => 'required', */
             'reference'         => 'nullable|max:50',
             'attachment'        => 'nullable|mimes:jpeg,png,jpg,doc,pdf,docx,zip',
         ]);
@@ -121,7 +121,7 @@ class ExpenseController extends Controller {
         $transaction->dr_cr             = 'dr';
         $transaction->amount            = $request->input('amount');
         $transaction->payer_payee_id    = $request->input('payer_payee_id');
-        $transaction->payment_method_id = $request->input('payment_method_id');
+        $transaction->payment_method_id = 1;/* $request->input('payment_method_id'); */
         $transaction->reference         = $request->input('reference');
         $transaction->note              = $request->input('note');
         $transaction->attachment        = $attachment;
