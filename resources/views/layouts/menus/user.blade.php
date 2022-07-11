@@ -179,7 +179,7 @@
     </nav>
 </div>
 
-<a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#transaction_settings" aria-expanded="false"
+{{--<a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#transaction_settings" aria-expanded="false"
     aria-controls="collapseLayouts">
     <div class="sb-nav-link-icon"><i class="ti-credit-card"></i></div>
     {{ _lang('Transaction Settings') }}
@@ -188,9 +188,9 @@
 <div class="collapse" id="transaction_settings" aria-labelledby="headingOne" data-parent="#sidenavAccordion">
     <nav class="sb-sidenav-menu-nested nav">
         <a class="nav-link" href="{{ route('chart_of_accounts.index') }}">{{ _lang('Income & Expense Types') }}</a>
-        {{-- <a class="nav-link" href="{{ route('payment_methods.index') }}">{{ _lang('Payment Methods') }}</a>
-        <a class="nav-link" href="{{ route('taxs.index') }}">{{ _lang('Tax Settings') }}</a> --}}
+         <a class="nav-link" href="{{ route('payment_methods.index') }}">{{ _lang('Payment Methods') }}</a>
+        <a class="nav-link" href="{{ route('taxs.index') }}">{{ _lang('Tax Settings') }}</a> 
     </nav>
-</div>
+</div>--}}
 
 
