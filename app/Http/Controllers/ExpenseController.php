@@ -96,14 +96,15 @@ class ExpenseController extends Controller {
             'attachment'        => 'nullable|mimes:jpeg,png,jpg,doc,pdf,docx,zip',
         ]);
 
-        $transaction                    = new Transaction();
+       
         
 
         if($request->input('authorized_payment') == 1) {
 
-            $deposit = $transaction->sum('amount')
-            ->where("account_id", $request->input('account_id'))
-            ->where("type", "income");
+
+            $deposit = Transaction::where("account_id", $request->input('account_id'))
+            ->where("type", "income")->sum('amount_total');
+
 
             dd($deposit);
 
@@ -140,7 +141,7 @@ class ExpenseController extends Controller {
             $attachment = time() . $file->getClientOriginalName();
             $file->move(public_path() . "/uploads/transactions/", $attachment);
         }
-
+        $transaction                    = new Transaction();
         
         $transaction->trans_date        = $request->input('trans_date');
         $transaction->account_id        = $request->input('account_id');
