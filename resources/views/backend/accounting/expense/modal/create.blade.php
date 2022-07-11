@@ -59,7 +59,7 @@
             </div>
         </div>
 
-        <div class="col-md-6">
+        <div class="col-md-6" hidden>
             <div class="form-group">
                 <a href="{{ route('payment_methods.create') }}" data-reload="false"
                     data-title="{{ _lang('Add Payment Method') }}" class="ajax-modal-2 select2-add"><i
@@ -73,12 +73,14 @@
             </div>
         </div>
 
-        <div class="col-md-12">
+        <div class="col-md-6">
             <div class="form-group">
                 <label class="control-label">{{ _lang('Reference') }}</label>
                 <input type="text" class="form-control" name="reference" value="{{ old('reference') }}">
             </div>
         </div>
+
+        
 
         <div class="col-md-12">
             <div class="form-group">
@@ -92,6 +94,15 @@
                 <label class="control-label">{{ _lang('Note') }}</label>
                 <textarea class="form-control" name="note">{{ old('note') }}</textarea>
             </div>
+        </div>
+
+        <div class="col-md-12">
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="1" name="authorized payment" id="authorized_payment">
+                <label class="form-check-label" for="authorized_payment">
+                  Autorizar Pagamento
+                </label>
+              </div>
         </div>
 
         <div class="form-group">
