@@ -107,7 +107,7 @@
         <a class="nav-link" href="{{ route('income.index') }}">{{ _lang('Income/Deposit') }}</a>
         <a class="nav-link" href="{{ route('expense.index') }}">{{ _lang('Expense') }}</a>
         <a class="nav-link" href="{{ route('transfer.create') }}">{{ _lang('Transfer') }}</a>
-        <a class="nav-link" href="{{ route('income.income_calendar') }}">{{ _lang('Income Calendar') }}</a>
+        {{-- <a class="nav-link" href="{{ route('income.income_calendar') }}">{{ _lang('Income Calendar') }}</a> --}}
         <a class="nav-link" href="{{ route('expense.expense_calendar') }}">{{ _lang('Expense Calendar') }}</a>
     </nav>
 </div>
