@@ -66,7 +66,7 @@
                         class="ti-plus"></i> {{ _lang('Add New') }}</a>
                 <label class="control-label">{{ _lang('Payment Method') }}</label>
                 <select class="form-control select2-ajax" data-value="id" data-display="name"
-                    data-table="payment_methods" data-where="1" name="payment_method_id" required>
+                    data-table="payment_methods" data-where="1" name="payment_method_id" >
                     <option value="">{{ _lang('Select One') }}</option>
                     {{ create_option("payment_methods","id","name",old('payment_method_id'),array("company_id="=>company_id())) }}
                 </select>
