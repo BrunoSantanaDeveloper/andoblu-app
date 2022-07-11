@@ -27,10 +27,10 @@
 					data: "payee.contact_name",
 					name: "payee.contact_name"
 				},
-				{
+				/* {
 					data: "payment_method.name",
 					name: "payment_method.name"
-				},
+				}, */
 				{
 					data: "action",
 					name: "action"
