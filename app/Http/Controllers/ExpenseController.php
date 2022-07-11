@@ -99,7 +99,7 @@ class ExpenseController extends Controller {
         $transaction                    = new Transaction();
         
 
-        if (isset($request->input('authorized_payment')) == 1) {
+        if($request->input('authorized_payment') == 1) {
 
             $deposit = Transaction::sum('amount')
             ->where("account_id", $request->input('account_id'))
