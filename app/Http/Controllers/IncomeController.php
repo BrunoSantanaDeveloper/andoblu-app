@@ -43,19 +43,19 @@ class IncomeController extends Controller {
             ->addColumn('action', function ($trans) {
                 if (isset($trans->income_type->name)) {
                     return '<form action="' . action('IncomeController@destroy', $trans['id']) . '" class="text-center" method="post">'
-                    . '<a href="' . action('IncomeController@edit', $trans['id']) . '" data-title="' . _lang('Update Income') . '" class="btn btn-warning btn-sm ajax-modal"><i class="ti-pencil-alt"></i></a> '
+                    /* . '<a href="' . action('IncomeController@edit', $trans['id']) . '" data-title="' . _lang('Update Income') . '" class="btn btn-warning btn-sm ajax-modal"><i class="ti-pencil-alt"></i></a> ' */
                     . '<a href="' . action('IncomeController@show', $trans['id']) . '" data-title="' . _lang('View Income') . '" class="btn btn-info btn-sm ajax-modal"><i class="ti-eye"></i></a> '
                     . csrf_field()
                     . '<input name="_method" type="hidden" value="DELETE">'
-                    . '<button class="btn btn-danger btn-sm btn-remove" type="submit"><i class="ti-trash"></i></button>'
+                    /* . '<button class="btn btn-danger btn-sm btn-remove" type="submit"><i class="ti-trash"></i></button>' */
                         . '</form>';
                 } else {
                     return '<form action="' . action('IncomeController@destroy', $trans['id']) . '" class="text-center" method="post">'
-                    . '<a href="#" data-title="' . _lang('Update Income') . '" class="btn btn-warning btn-sm ajax-modal" disabled><i class="ti-pencil-alt"></i></a>'
+                    /* . '<a href="#" data-title="' . _lang('Update Income') . '" class="btn btn-warning btn-sm ajax-modal" disabled><i class="ti-pencil-alt"></i></a>' */
                     . '<a href="' . action('IncomeController@show', $trans['id']) . '" data-title="' . _lang('View Income') . '" class="btn btn-info btn-sm ajax-modal"><i class="ti-eye"></i></a>'
                     . csrf_field()
                     . '<input name="_method" type="hidden" value="DELETE">'
-                    . '<button class="btn btn-danger btn-sm btn-remove" type="submit"><i class="ti-trash"></i></button>'
+                    /* . '<button class="btn btn-danger btn-sm btn-remove" type="submit"><i class="ti-trash"></i></button>' */
                         . '</form>';
                 }
             })
@@ -88,7 +88,7 @@ class IncomeController extends Controller {
     public function store(Request $request) {
         $validator = Validator::make($request->all(), [
             'trans_date'        => 'required',
-            'account_id'        => 'required',
+            /* 'account_id'        => 'required', */
             /* 'chart_id'          => 'required', */
             'amount'            => 'required|numeric',
             /* 'payment_method_id' => 'required', */
@@ -115,7 +115,7 @@ class IncomeController extends Controller {
 
         $transaction                    = new Transaction();
         $transaction->trans_date        = $request->input('trans_date');
-        $transaction->account_id        = $request->input('account_id');
+        $transaction->account_id        = 1;/* $request->input('account_id'); */
         $transaction->chart_id          = 5;/* $request->input('chart_id'); */
         $transaction->type              = 'income';
         $transaction->dr_cr             = 'cr';

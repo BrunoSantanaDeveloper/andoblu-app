@@ -72,10 +72,14 @@ class ExpenseController extends Controller {
      * @return \Illuminate\Http\Response
      */
     public function create(Request $request) {
+
+        $amount = Transaction::where("company_id", company_id())
+            ->where("type", "income")->sum('amount');
+            
         if (!$request->ajax()) {
-            return view('backend.accounting.expense.create');
+            return view('backend.accounting.expense.create',compact('amount'));
         } else {
-            return view('backend.accounting.expense.modal.create');
+            return view('backend.accounting.expense.modal.create',compact('amount'));
         }
     }
 
@@ -88,7 +92,7 @@ class ExpenseController extends Controller {
     public function store(Request $request) {
         $validator = Validator::make($request->all(), [
             'trans_date'        => 'required',
-            'account_id'        => 'required',
+            /* 'account_id'        => 'required', */
             'chart_id'          => 'required',
             'amount'            => 'required|numeric',
             /* 'payment_method_id' => 'required', */
@@ -102,11 +106,14 @@ class ExpenseController extends Controller {
         if($request->input('authorized_payment') == 1) {
 
 
-            $deposit = Transaction::where("account_id", $request->input('account_id'))
-            ->where("type", "income")->sum('amount');
+            $deposit = Transaction::where("company_id", company_id())
+            ->where("type", "income")
+            ->sum('amount');
 
-            $expense = Transaction::where("account_id", $request->input('account_id'))
-            ->where("type", "expense")->sum('amount');
+            $expense = Transaction::where("company_id", company_id())
+            ->where("type", "expense")
+            ->where("authorized_payment", 1)
+            ->sum('amount');
 
             if(($deposit - $expense) - $request->input('amount') <= 0){
                 if ($request->ajax()) {
@@ -140,7 +147,7 @@ class ExpenseController extends Controller {
         $transaction                    = new Transaction();
         
         $transaction->trans_date        = $request->input('trans_date');
-        $transaction->account_id        = $request->input('account_id');
+        $transaction->account_id        = 1;/* $request->input('account_id'); */
         $transaction->chart_id          = $request->input('chart_id');
         $transaction->type              = 'expense';
         $transaction->dr_cr             = 'dr';
@@ -194,6 +201,9 @@ class ExpenseController extends Controller {
     public function edit(Request $request, $id) {
         $transaction = Transaction::find($id);
 
+        $amount = Transaction::where("company_id", company_id())
+            ->where("type", "income")->sum('amount');
+
         if (!$request->ajax()) {
             return view('backend.accounting.expense.edit', compact('transaction', 'id'));
         } else {
@@ -212,7 +222,7 @@ class ExpenseController extends Controller {
     public function update(Request $request, $id) {
         $validator = Validator::make($request->all(), [
             'trans_date'        => 'required',
-            'account_id'        => 'required',
+            /* 'account_id'        => 'required', */
             'chart_id'          => 'required',
             'amount'            => 'required|numeric',
             /* 'payment_method_id' => 'required', */
@@ -223,10 +233,10 @@ class ExpenseController extends Controller {
         if($request->input('authorized_payment') == 1) {
 
 
-            $deposit = Transaction::where("account_id", $request->input('account_id'))
+            $deposit = Transaction::where("company_id", company_id())
             ->where("type", "income")->sum('amount');
 
-            $expense = Transaction::where("account_id", $request->input('account_id'))
+            $expense = Transaction::where("company_id", company_id())
             ->where("type", "expense")->sum('amount');
 
             if(($deposit - $expense) - $request->input('amount') <= 0){
@@ -261,7 +271,7 @@ class ExpenseController extends Controller {
 
         $transaction                    = Transaction::where("id", $id)->where("company_id", company_id())->first();
         $transaction->trans_date        = $request->input('trans_date');
-        $transaction->account_id        = $request->input('account_id');
+        $transaction->account_id        = 1;/* $request->input('account_id'); */
         $transaction->chart_id          = $request->input('chart_id');
         $transaction->type              = 'expense';
         $transaction->dr_cr             = 'dr';

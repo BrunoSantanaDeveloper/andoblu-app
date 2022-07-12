@@ -1,3 +1,12 @@
+<div class="row p-2">
+    <div class="col-md-12 text-center">
+        <div class="card-body">
+            <h5>Saldo em Conta</h5>
+            <h6 class="pt-1"><b>{{ $amount }}</b></h6>
+        </div>
+    </div>
+</div>
+
 <form method="post" class="ajax-submit" autocomplete="off" action="{{ action('ExpenseController@update', $id) }}"
     enctype="multipart/form-data">
     {{ csrf_field()}}
@@ -12,13 +21,13 @@
             </div>
         </div>
 
-        <div class="col-md-6">
+        <div class="col-md-6" hidden>
             <div class="form-group">
                 <a href="{{ route('accounts.create') }}" data-reload="false" data-title="{{ _lang('Create Account') }}"
                     class="ajax-modal-2 select2-add"><i class="ti-plus"></i> {{ _lang('Add New') }}</a>
                 <label class="control-label">{{ _lang('Account') }}</label>
                 <select class="form-control select2-ajax" data-value="id" data-display="account_title"
-                    data-table="accounts" data-where="1" name="account_id" required>
+                    data-table="accounts" data-where="1" name="account_id" >
                     <option value="">{{ _lang('Select One') }}</option>
                     {{ create_option("accounts","id","account_title",$transaction->account_id,array("company_id="=>company_id())) }}
                 </select>

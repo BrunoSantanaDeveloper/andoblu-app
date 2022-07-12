@@ -11,11 +11,11 @@
 					data: "trans_date",
 					name: "trans_date"
 				},
-				{
+				/*{
 					data: "account.account_title",
 					name: "account.account_title"
 				},
-				/* {
+				 {
 					data: "income_type.name",
 					name: "income_type.name"
 				}, */
