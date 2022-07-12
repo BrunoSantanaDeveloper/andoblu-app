@@ -17,16 +17,7 @@ class DashboardController extends Controller {
     public function index() {
         $type = Auth::user()->user_type;
         
-        $deposit = Transaction::where("company_id", company_id())
-        ->where("type", "income")
-        ->sum('amount');
-
-        $expense = Transaction::where("company_id", company_id())
-        ->where("type", "expense")
-        ->where("authorized_payment", 1)
-        ->sum('amount');
-
-        $data['income_total'] = $deposit - $expense;
+        
         if ($type == "admin") {
             $data               = array();
             $data['total_user'] = \App\User::selectRaw('COUNT(id) as c')
@@ -75,6 +66,18 @@ class DashboardController extends Controller {
             $data['latest_expense'] = Transaction::where("company_id", company_id())
                 ->where("dr_cr", "dr")
                 ->orderBy("id", "desc")->limit(5)->get();
+
+            $deposit = Transaction::where("company_id", company_id())
+                ->where("type", "income")
+                ->sum('amount');
+
+            $expense = Transaction::where("company_id", company_id())
+                ->where("type", "expense")
+                ->where("authorized_payment", 1)
+                ->sum('amount');
+
+            $data['income_total'] = $deposit - $expense;
+            
             return view('backend/dashboard-' . $type, $data);
         }
     }
