@@ -149,7 +149,6 @@ class ExpenseController extends Controller {
         $transaction->payment_method_id = 1;/* $request->input('payment_method_id'); */
         $transaction->reference         = $request->input('reference');
         $transaction->note              = $request->input('note');
-        $transaction->authorized_payment              = $request->input('authorized_payment');
         $transaction->attachment        = $attachment;
 
         $transaction->save();
@@ -215,12 +214,10 @@ class ExpenseController extends Controller {
             'account_id'        => 'required',
             'chart_id'          => 'required',
             'amount'            => 'required|numeric',
-            /* 'payment_method_id' => 'required', */
+            'payment_method_id' => 'required',
             'reference'         => 'nullable|max:50',
             'attachment'        => 'nullable|mimes:jpeg,png,jpg,doc,pdf,docx,zip',
         ]);
-
-        
 
         if ($validator->fails()) {
             if ($request->ajax()) {
@@ -250,7 +247,6 @@ class ExpenseController extends Controller {
         $transaction->payment_method_id = $request->input('payment_method_id');
         $transaction->reference         = $request->input('reference');
         $transaction->note              = $request->input('note');
-        $transaction->authorized_payment              = $request->input('authorized_payment');
         if ($request->hasfile('attachment')) {
             $transaction->attachment = $attachment;
         }
