@@ -30,7 +30,7 @@ class ExpenseController extends Controller {
             ->where("transactions.dr_cr", "dr")
             ->orderBy("transactions.id", "desc");
 
-            dd($transactions);
+        
 
         return Datatables::eloquent($transactions)
             ->editColumn('amount', function ($trans) use ($currency) {
@@ -43,7 +43,7 @@ class ExpenseController extends Controller {
                 return isset($trans->expense_type->name) ? $trans->expense_type->name : _lang('Transfer');
             })
             ->editColumn('authorized_payment', function ($trans) {
-                return isset($trans->transactions->authorized_payment) == 1 ? "Autorizado" : $trans->transactions->authorized_payment;
+                return isset($trans->transactions->authorized_payment) == 1 ? "Autorizado" : $trans->authorized_payment;
             })
             ->addColumn('action', function ($trans) {
                 if (isset($trans->expense_type->name)) {
