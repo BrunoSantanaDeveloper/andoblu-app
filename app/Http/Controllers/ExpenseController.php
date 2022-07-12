@@ -30,6 +30,8 @@ class ExpenseController extends Controller {
             ->where("transactions.dr_cr", "dr")
             ->orderBy("transactions.id", "desc");
 
+            dd($transactions);
+
         return Datatables::eloquent($transactions)
             ->editColumn('amount', function ($trans) use ($currency) {
                 return "<span class='float-right'>" . $currency . " " . decimalPlace($trans->amount) . "</span>";
