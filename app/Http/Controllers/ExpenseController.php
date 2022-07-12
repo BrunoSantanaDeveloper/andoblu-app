@@ -41,7 +41,7 @@ class ExpenseController extends Controller {
                 return isset($trans->expense_type->name) ? $trans->expense_type->name : _lang('Transfer');
             })
             ->editColumn('authorized_payment', function ($trans) {
-                return isset($trans->transactions->authorized_payment) == 1 ? "Autorizado" : "Não Autorizado";
+                return isset($trans->transactions->authorized_payment) == 1 ? "Autorizado" : $trans->transactions->authorized_payment;
             })
             ->addColumn('action', function ($trans) {
                 if (isset($trans->expense_type->name)) {
