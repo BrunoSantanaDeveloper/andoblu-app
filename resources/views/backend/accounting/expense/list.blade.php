@@ -20,6 +20,7 @@
                             <th>{{ _lang('Expense Type') }}</th>
                             <th class="text-right">{{ _lang('Amount') }}</th>
                             <th>{{ _lang('Payee') }}</th>
+                            <th>Pag. Autorizado</th>
                             {{-- <th>{{ _lang('Payment Method') }}</th> --}}
                             <th class="action-col">{{ _lang('Action') }}</th>
                         </tr>
