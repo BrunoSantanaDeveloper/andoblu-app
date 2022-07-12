@@ -6,29 +6,12 @@
 @php $currency = currency(); @endphp
 
 <div class="row">
-<div class="col-xl-6">
+
+    <div class="col-xl-3 col-md-6" hidden>
         <div class="card mb-4">
-            <div class="card-header">
-                <h4 class="header-title">{{ _lang('Financial Account Balance') }}</h4>
-            </div>
             <div class="card-body">
-                <table class="table table-bordered">
-                    <thead>
-                        <tr>
-                            <th>{{ _lang('A/C') }}</th>
-                            <th class="text-right">{{ _lang('Balance') }}</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        @foreach(get_financial_balance() as $account)
-                        <tr id="row_{{ $account->id }}">
-                            <td class='account_title'>{{ $account->account_title }}</td>
-                            <td class='opening_balance text-right'>{{ decimalPlace($account->balance, $currency) }}
-                            </td>
-                        </tr>
-                        @endforeach
-                    </tbody>
-                </table>
+                <h5>{{ _lang('Balance') }}</h5>
+                <h6 class="pt-1"><b>{{ decimalPlace($income_total, $currency) }}</b></h6>
             </div>
         </div>
     </div>
