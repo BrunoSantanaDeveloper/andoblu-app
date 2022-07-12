@@ -107,7 +107,7 @@
 
         <div class="col-md-12 text-right">
             <div class="form-check">
-                <input class="form-check-input" type="checkbox" value="1" name="authorized payment" id="authorized_payment">
+                <input class="form-check-input" type="checkbox" value="1" name="authorized payment" id="authorized_payment" {{ $transaction->authorized_payment == 1 ? "checked" : "" }}>
                 <label class="form-check-label" for="authorized_payment">
                   Autorizar Pagamento
                 </label>
