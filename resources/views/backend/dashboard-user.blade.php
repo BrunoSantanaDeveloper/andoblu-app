@@ -7,7 +7,7 @@
 
 <div class="row">
 
-    <div class="col-xl-3 col-md-6" hidden>
+    <div class="col-xl-3 col-md-6" >
         <div class="card mb-4">
             <div class="card-body">
                 <h5>{{ _lang('Balance') }}</h5>
