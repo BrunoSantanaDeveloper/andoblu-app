@@ -16,7 +16,7 @@
                     <thead>
                         <tr>
                             <th>{{ _lang('Date') }}</th>
-                            <th>{{ _lang('Account') }}</th>
+                            {{-- <th>{{ _lang('Account') }}</th> --}}
                             <th>{{ _lang('Expense Type') }}</th>
                             <th class="text-right">{{ _lang('Amount') }}</th>
                             <th>{{ _lang('Payee') }}</th>
