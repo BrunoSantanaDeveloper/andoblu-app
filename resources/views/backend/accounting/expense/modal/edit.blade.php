@@ -60,21 +60,21 @@
             </div>
         </div>
 
-        <div class="col-md-6">
+        <div class="col-md-6" hidden>
             <div class="form-group">
                 <a href="{{ route('payment_methods.create') }}" data-reload="false"
                     data-title="{{ _lang('Add Payment Method') }}" class="ajax-modal-2 select2-add"><i
                         class="ti-plus"></i> {{ _lang('Add New') }}</a>
                 <label class="control-label">{{ _lang('Payment Method') }}</label>
                 <select class="form-control select2-ajax" data-value="id" data-display="name"
-                    data-table="payment_methods" data-where="1" name="payment_method_id" required>
+                    data-table="payment_methods" data-where="1" name="payment_method_id" >
                     <option value="">{{ _lang('Select One') }}</option>
                     {{ create_option("payment_methods","id","name",$transaction->payment_method_id,array("company_id="=>company_id())) }}
                 </select>
             </div>
         </div>
 
-        <div class="col-md-12">
+        <div class="col-md-6">
             <div class="form-group">
                 <label class="control-label">{{ _lang('Reference') }}</label>
                 <input type="text" class="form-control" name="reference" value="{{ $transaction->reference }}">
@@ -94,6 +94,15 @@
                 <label class="control-label">{{ _lang('Note') }}</label>
                 <textarea class="form-control" name="note">{{ $transaction->note }}</textarea>
             </div>
+        </div>
+
+        <div class="col-md-12 text-right">
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="1" name="authorized payment" id="authorized_payment">
+                <label class="form-check-label" for="authorized_payment">
+                  Autorizar Pagamento
+                </label>
+              </div>
         </div>
 
         <div class="form-group">
