@@ -205,9 +205,9 @@ class ExpenseController extends Controller {
             ->where("type", "income")->sum('amount');
 
         if (!$request->ajax()) {
-            return view('backend.accounting.expense.edit', compact('transaction', 'id'));
+            return view('backend.accounting.expense.edit', compact('transaction', 'id','amount'));
         } else {
-            return view('backend.accounting.expense.modal.edit', compact('transaction', 'id'));
+            return view('backend.accounting.expense.modal.edit', compact('transaction', 'id','amount'));
         }
 
     }
