@@ -149,6 +149,7 @@ class ExpenseController extends Controller {
         $transaction->payment_method_id = 1;/* $request->input('payment_method_id'); */
         $transaction->reference         = $request->input('reference');
         $transaction->note              = $request->input('note');
+        $transaction->authorized_payment              = $request->input('authorized_payment');
         $transaction->attachment        = $attachment;
 
         $transaction->save();
@@ -214,10 +215,32 @@ class ExpenseController extends Controller {
             'account_id'        => 'required',
             'chart_id'          => 'required',
             'amount'            => 'required|numeric',
-            'payment_method_id' => 'required',
+            /* 'payment_method_id' => 'required', */
             'reference'         => 'nullable|max:50',
             'attachment'        => 'nullable|mimes:jpeg,png,jpg,doc,pdf,docx,zip',
         ]);
+
+        if($request->input('authorized_payment') == 1) {
+
+
+            $deposit = Transaction::where("account_id", $request->input('account_id'))
+            ->where("type", "income")->sum('amount');
+
+            $expense = Transaction::where("account_id", $request->input('account_id'))
+            ->where("type", "expense")->sum('amount');
+
+            if(($deposit - $expense) - $request->input('amount') <= 0){
+                if ($request->ajax()) {
+                    return response()->json(['result' => 'error', 'message' => 'Saldo Insuficiente']);
+                } else {
+                    return redirect()->route('expense.create')
+                        ->withErrors('Saldo Insuficiente')
+                        ->withInput();
+                }
+            }
+
+            
+        }
 
         if ($validator->fails()) {
             if ($request->ajax()) {
@@ -247,6 +270,7 @@ class ExpenseController extends Controller {
         $transaction->payment_method_id = $request->input('payment_method_id');
         $transaction->reference         = $request->input('reference');
         $transaction->note              = $request->input('note');
+        $transaction->authorized_payment              = $request->input('authorized_payment');
         if ($request->hasfile('attachment')) {
             $transaction->attachment = $attachment;
         }
@@ -261,9 +285,9 @@ class ExpenseController extends Controller {
         $transaction->payment_method_id = $transaction->payment_method->name;
 
         if (!$request->ajax()) {
-            return redirect()->route('expense.index')->with('success', _lang('Updated Sucessfully'));
+            return redirect()->route('expense.index')->with('success', _lang('Alterado com sucesso'));
         } else {
-            return response()->json(['result' => 'success', 'action' => 'update', 'message' => _lang('Updated Sucessfully'), 'data' => $transaction]);
+            return response()->json(['result' => 'success', 'action' => 'update', 'message' => _lang('Alterado com sucesso'), 'data' => $transaction]);
         }
 
     }
