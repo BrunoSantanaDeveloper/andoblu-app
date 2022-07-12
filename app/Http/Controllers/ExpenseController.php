@@ -73,8 +73,16 @@ class ExpenseController extends Controller {
      */
     public function create(Request $request) {
 
-        $amount = Transaction::where("company_id", company_id())
-            ->where("type", "income")->sum('amount');
+        $deposit = Transaction::where("company_id", company_id())
+        ->where("type", "income")
+        ->sum('amount');
+
+        $expense = Transaction::where("company_id", company_id())
+        ->where("type", "expense")
+        ->where("authorized_payment", 1)
+        ->sum('amount');
+
+        $amount = $deposit - $expense;
             
         if (!$request->ajax()) {
             return view('backend.accounting.expense.create',compact('amount'));
@@ -201,8 +209,16 @@ class ExpenseController extends Controller {
     public function edit(Request $request, $id) {
         $transaction = Transaction::find($id);
 
-        $amount = Transaction::where("company_id", company_id())
-            ->where("type", "income")->sum('amount');
+            $deposit = Transaction::where("company_id", company_id())
+            ->where("type", "income")
+            ->sum('amount');
+
+            $expense = Transaction::where("company_id", company_id())
+            ->where("type", "expense")
+            ->where("authorized_payment", 1)
+            ->sum('amount');
+
+            $amount = $deposit - $expense;
 
         if (!$request->ajax()) {
             return view('backend.accounting.expense.edit', compact('transaction', 'id','amount'));
@@ -237,6 +253,7 @@ class ExpenseController extends Controller {
             ->where("type", "income")->sum('amount');
 
             $expense = Transaction::where("company_id", company_id())
+            ->where("authorized_payment", 1)
             ->where("type", "expense")->sum('amount');
 
             if(($deposit - $expense) - $request->input('amount') <= 0){
